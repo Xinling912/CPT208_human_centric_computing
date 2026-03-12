@@ -1,44 +1,116 @@
-index.html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>CPT208 Portfolio | Playful Experience</title>
+    <title>CPT208 Portfolio | Group C1-3</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: auto; padding: 20px; color: #333; }
-        header { border-bottom: 2px solid #005f73; padding-bottom: 20px; margin-bottom: 30px; }
-        section { margin-bottom: 40px; padding: 20px; border-left: 5px solid #eee; }
-        .week-tag { font-weight: bold; color: #005f73; text-transform: uppercase; }
-        .ai-reflection { background: #f9f9f9; padding: 15px; border: 1px dashed #ccc; margin-top: 10px; }
-        img { max-width: 100%; height: auto; border: 1px solid #ddd; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1000px; margin: auto; padding: 20px; color: #333; background-color: #fcfcfc; }
+        header { border-bottom: 3px solid #005f73; padding-bottom: 20px; margin-bottom: 30px; text-align: center; }
+        h1 { color: #005f73; }
+        h2 { color: #0a9396; border-bottom: 2px solid #e9ecef; padding-bottom: 5px;}
+        h3 { color: #94d2bd; }
+        section { margin-bottom: 40px; padding: 25px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .week-tag { display: inline-block; background: #005f73; color: white; padding: 5px 10px; border-radius: 5px; font-weight: bold; text-transform: uppercase; font-size: 0.85em; margin-bottom: 15px;}
+        
+        /* 卡片排版 (团队与Persona) */
+        .card-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
+        .card { flex: 1; min-width: 200px; max-width: 220px; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #fff; text-align: center; border-top: 4px solid #0a9396; }
+        .card-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; background-color: #eee; display: inline-block; }
+        .card-title { font-size: 1.1em; margin: 0 0 5px 0; color: #333; }
+        .card-subtitle { font-size: 0.85em; color: #777; margin-bottom: 10px; }
+        .card-highlight { font-weight: bold; color: #005f73; font-size: 0.9em; margin-bottom: 10px; }
+        .card-text { font-size: 0.85em; color: #555; line-height: 1.4; text-align: left; }
+
+        /* Persona 专属宽卡片 */
+        .persona-card { flex: 1; min-width: 300px; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background: #fdfdfd; border-left: 5px solid #ee9b00; }
+        
+        .ai-reflection { background: #f0f9fa; padding: 20px; border-radius: 8px; border: 1px dashed #0a9396; margin-top: 20px; }
     </style>
 </head>
 <body>
     <header>
         <h1>CPT208: Designing Playful Experiences</h1>
-        <p><strong>Group Members:</strong> [Xinling Du], [Zairan Shi], [Lingyu Wang], [Peilin Liu]</p>
-        <p><strong>Selected Topic:</strong> [选题待定]</p>
+        <p><strong>Team:</strong> Group C1-3</p>
+        <p><strong>Selected Topic:</strong> Topic C1 (Running) - <strong>Geo-PolyRun</strong></p>
+        <p><em>Transforming solitary runs into a strategic, location-based turf war.</em></p>
     </header>
 
     <section>
-        <div class="week-tag">Week 2: Topic Lock & Setup</div>
-        <h2>项目启动与初步设想</h2>
-        <p>本周我们锁定了设计主题，并初始化了 GitHub 仓库 [cite: 20, 157]。</p>
-        <h3>初衷 (Motivation)</h3>
-        <p>[为什么选这个题目，想解决什么问题]</p>
-        
-        <div class="ai-reflection">
-            <h4>🤖 AI 使用记录与反思 (Technical Reflection)</h4>
-            <p><strong>任务：</strong> 辅助选题分析与网页框架生成 [cite: 57, 69]。</p>
-            <p><strong>关键提示词 (Prompt)：</strong> "分析 HCI 课程的可选主题，对比其趣味性实现难度..."</p>
-            <p><strong>验证方法：</strong> 我们核对了 Module Handbook 中的分值占比，确保 GitHub Pages 模版符合托管要求 [cite: 68]。</p>
+        <h2>Meet the Team</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/avatar_xinling.jpg" alt="Avatar" class="card-avatar">
+                <h3 class="card-title">Xinling Du</h3>
+                <p class="card-subtitle">ID: [填入学号]</p>
+                <p class="card-highlight">Product Manager & HCI Lead</p>
+                <p class="card-text">Leading the core gameplay loop design and ensuring the system meets high Usability and Playful Experience standards.</p>
+            </div>
+            <div class="card">
+                <img src="images/avatar_zairan.jpg" alt="Avatar" class="card-avatar">
+                <h3 class="card-title">Zairan Shi</h3>
+                <p class="card-subtitle">ID: [填入学号]</p>
+                <p class="card-highlight">Lead Developer</p>
+                <p class="card-text">Responsible for implementing the Geolocation API and Turf.js algorithms for bug-free polygon area calculation.</p>
+            </div>
+            <div class="card">
+                <img src="images/avatar_lingyu.jpg" alt="Avatar" class="card-avatar">
+                <h3 class="card-title">Lingyu Wang</h3>
+                <p class="card-subtitle">ID: [填入学号]</p>
+                <p class="card-highlight">UI/UX Designer</p>
+                <p class="card-text">Focusing on intuitive mobile interfaces, gesture controls (drag-and-drop), and visual feedback for the map interactions.</p>
+            </div>
+            <div class="card">
+                <img src="images/avatar_peilin.jpg" alt="Avatar" class="card-avatar">
+                <h3 class="card-title">Peilin Liu</h3>
+                <p class="card-subtitle">ID: [填入学号]</p>
+                <p class="card-highlight">XR & Interactive Specialist</p>
+                <p class="card-text">Developing the Tangible AR victory settlement using WebXR, and crafting the procedural level generation logic.</p>
+            </div>
         </div>
     </section>
 
     <section>
-        <div class="week-tag">Week 4: User Research</div>
-        <h2>用户调研（待更新）</h2>
-        <p>即将记录：用户画像、旅程图及学术研究 [cite: 22, 23]。</p>
+        <div class="week-tag">Week 2: Topic Lock & Requirements</div>
+        <h2>1. 项目初衷与动机 (Project Motivation)</h2>
+        <p>Despite the physical benefits of running, maintaining a consistent routine is notoriously difficult, especially for beginners. Traditional running applications focus heavily on quantitative metrics (pace, distance, calories), which often exacerbate the monotony of the exercise.</p>
+        <p><strong>Design Rationale & Stakeholder Feedback:</strong> During our initial research, a running club organizer suggested a "Cultural Check-in Run" around Dushu Lake. However, from an HCI perspective, we rejected this idea because forcing runners to stop and listen to historical stories critically disrupts their <strong>"Flow State"</strong>. Furthermore, static check-in points suffer from a severe <strong>retention crisis (zero replayability)</strong>.</p>
+        <p><strong>Our Solution: Geo-PolyRun.</strong> We are shifting the paradigm from "running for metrics" to "running for strategy and team synergy." By utilizing a "Hold-to-Capture Nodes" and "Post-run Polygon Enclosure" mechanism, we turn a complex, grid-like physical environment (e.g., XJTLU South Campus) into a dynamic, multiplayer territory-capture game.</p>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+
+        <h2>2. 用户画像 (Personas - 10/80/10 AI Principle)</h2>
+        <p>To better understand our target audience and guide our design decisions, we generated two distinct Personas using the <strong>10-80-10 AI workflow</strong> (10% human context prompting, 80% AI generation, 10% human refinement based on XJTLU context).</p>
+        
+        <div class="card-container" style="justify-content: flex-start;">
+            <div class="persona-card">
+                <h3 style="margin-top:0;">Persona 1: The Reluctant Beginner</h3>
+                <p><strong>Name:</strong> Alex Chen (20, Design Student at XJTLU)</p>
+                <p><em>"I know I need cardio, but jogging around the track alone feels like a punishment."</em></p>
+                <p><strong>Frustrations:</strong> Intimidated by pace metrics; gets bored easily; traditional audio-guides feel like homework.</p>
+                <p><strong>How Geo-PolyRun Helps:</strong> The "Golden Node" blind box mechanism gives Alex short bursts of dopamine, turning a monotonous run into a treasure hunt. The focus is on capturing points for the team, making him forget about his slow pace.</p>
+            </div>
+
+            <div class="persona-card">
+                <h3 style="margin-top:0;">Persona 2: The Tactical Socializer</h3>
+                <p><strong>Name:</strong> Brian Wang (22, CS Student at XJTLU)</p>
+                <p><em>"I don't mind breaking a sweat, as long as there's a strategy involved and I can win with my team."</em></p>
+                <p><strong>Frustrations:</strong> Standard fitness apps lack real-time competition; GPS tracking apps often glitch and ruin the game.</p>
+                <p><strong>How Geo-PolyRun Helps:</strong> The "Strategy Phase" (post-run polygon drawing) perfectly matches his gamer mindset. He can plan "stacking" tactics, and the Tangible AR reward satisfies his need for a shareable victory moment.</p>
+            </div>
+        </div>
+
+        <div class="ai-reflection">
+            <h4>🤖 AI 使用记录与反思 (Technical Reflection)</h4>
+            <p><strong>Task:</strong> Brainstorming core mechanics, solving technical bottlenecks, and drafting Personas.</p>
+            <p><strong>Process & Prompting:</strong> We used conversational AI to critically evaluate our initial LBS game ideas. We prompted the AI to identify potential exploits (e.g., players capturing 4 corners of a map to win instantly) and technical flaws (e.g., polygon self-intersection errors).</p>
+            <p><strong>Human Refinement:</strong> The AI suggested using <code>Turf.js</code> for area calculation and proposed an elegant "Action-Strategy Loop" (running first, drawing polygons later) to prevent errors and enhance post-run socialization. We refined the AI-generated Personas to specifically fit the demographic of XJTLU students.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="week-tag">Week 4: User Journey & Prototyping</div>
+        <h2>交互旅程与原型 (Coming Soon)</h2>
+        <p>This section will include our detailed User Journey Map and low-fidelity Figma wireframes for the "Drag-and-Drop" node connection interface.</p>
     </section>
 </body>
 </html>
