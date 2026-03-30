@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CPT208 Portfolio | Group C1-3</title>
+    <title>CPT208 Portfolio | Group C1-3 | EchoRun</title>
     <style>
-        /* 马卡龙色系主题 */
         :root {
-            --macaron-bg: #FFF5F7; /* 极浅的草莓奶昔色 */
-            --macaron-text: #5D576B; /* 柔和的深紫灰色，保护视力 */
-            --macaron-mint: #B5EAD7; /* 薄荷绿 */
-            --macaron-pink: #FFB7B2; /* 蜜桃粉 */
-            --macaron-purple: #C7CEEA; /* 香芋紫 */
-            --macaron-yellow: #FDFD96; /* 奶酪黄 */
-            --macaron-blue: #A2E1DB; /* 婴儿蓝 */
+            --macaron-bg: #FFF5F7;
+            --macaron-text: #5D576B;
+            --macaron-mint: #B5EAD7;
+            --macaron-pink: #FFB7B2;
+            --macaron-purple: #C7CEEA;
+            --macaron-yellow: #FDFD96;
+            --macaron-blue: #A2E1DB;
             --card-bg: #FFFFFF;
         }
-
+        * { box-sizing: border-box; }
         body { font-family: 'Segoe UI', Quicksand, Tahoma, sans-serif; line-height: 1.6; max-width: 1000px; margin: auto; padding: 20px; color: var(--macaron-text); background-color: var(--macaron-bg); }
-        
         header { border-bottom: 4px dashed var(--macaron-pink); padding-bottom: 20px; margin-bottom: 30px; text-align: center; }
         h1 { color: #FF9AA2; font-size: 2.2em; text-shadow: 1px 1px 2px rgba(0,0,0,0.05); }
-        h2 { color: #85CCC6; border-bottom: 3px solid var(--macaron-mint); padding-bottom: 5px; display: inline-block; margin-bottom: 20px;}
+        h2 { color: #85CCC6; border-bottom: 3px solid var(--macaron-mint); padding-bottom: 5px; display: inline-block; margin-bottom: 20px; }
         h3 { color: #A6B1E1; }
-        
-        section { margin-bottom: 40px; padding: 30px; background: var(--card-bg); border-radius: 20px; box-shadow: 0 8px 15px rgba(255, 183, 178, 0.15); border: 2px solid #FFF; }
-        
-        .week-tag { display: inline-block; background: var(--macaron-purple); color: white; padding: 6px 15px; border-radius: 20px; font-weight: bold; text-transform: uppercase; font-size: 0.85em; margin-bottom: 15px; letter-spacing: 1px;}
-        
-        /* 卡片排版 (团队与Persona) */
+        section { margin-bottom: 40px; padding: 30px; background: var(--card-bg); border-radius: 20px; box-shadow: 0 8px 15px rgba(255,183,178,0.15); border: 2px solid #FFF; }
+        .week-tag { display: inline-block; background: var(--macaron-purple); color: white; padding: 6px 15px; border-radius: 20px; font-weight: bold; text-transform: uppercase; font-size: 0.85em; margin-bottom: 15px; letter-spacing: 1px; }
+        hr.divider { border: none; border-top: 2px dashed #E2E2E2; margin: 30px 0; }
         .card-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 20px; }
         .card { flex: 1; min-width: 200px; max-width: 220px; padding: 25px 20px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); background: var(--card-bg); text-align: center; border-top: 6px solid var(--macaron-blue); transition: transform 0.3s ease; }
         .card:hover { transform: translateY(-5px); }
@@ -36,98 +31,391 @@
         .card-subtitle { font-size: 0.85em; color: #B5838D; margin-bottom: 10px; }
         .card-highlight { font-weight: bold; color: #E5989B; font-size: 0.9em; margin-bottom: 10px; background: #FFECD1; padding: 4px 8px; border-radius: 10px; display: inline-block; }
         .card-text { font-size: 0.85em; color: #8F8C99; line-height: 1.5; text-align: left; }
-
-        /* Persona 专属宽卡片 */
         .persona-card { flex: 1; min-width: 300px; padding: 25px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); background: #FAFAFA; border-left: 8px solid var(--macaron-pink); }
-        
-        .ai-reflection { background: #F8F9FA; padding: 25px; border-radius: 15px; border: 2px dashed var(--macaron-blue); margin-top: 30px; position: relative; }
+        .ai-reflection { background: #F8F9FA; padding: 25px; border-radius: 15px; border: 2px dashed var(--macaron-blue); margin-top: 30px; }
         .ai-reflection h4 { margin-top: 0; color: #85CCC6; font-size: 1.1em; }
+        .journey-intro { background: #F0FBF7; border-left: 5px solid #1D9E75; padding: 12px 18px; border-radius: 0 12px 12px 0; margin-bottom: 20px; font-size: 0.9em; }
+        .journey-wrap { overflow-x: auto; margin: 16px 0; }
+        .journey-table { border-collapse: collapse; min-width: 720px; width: 100%; font-size: 0.87em; }
+        .journey-table th { background: var(--macaron-purple); color: #fff; padding: 10px 12px; text-align: center; font-weight: 600; }
+        .journey-table td { padding: 9px 12px; vertical-align: top; border: 1px solid #EEE; }
+        .stage-label { font-weight: 700; color: #6D6875; text-align: center; background: #FAF7FF; }
+        .emotion-high { color: #27AE60; font-weight: 600; }
+        .emotion-low  { color: #E74C3C; font-weight: 600; }
+        .emotion-mid  { color: #F39C12; font-weight: 600; }
+        .curve-label { font-size: 0.82em; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
+        .insight-box { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
+        .pain-card { background: #FFF5F5; border: 1.5px solid #F5C4B3; border-radius: 14px; padding: 16px; }
+        .opp-card  { background: #F0FBF7; border: 1.5px solid #9FE1CB; border-radius: 14px; padding: 16px; }
+        .pain-card h4 { color: #D85A30; margin: 0 0 8px 0; font-size: 0.95em; }
+        .opp-card  h4 { color: #0F6E56; margin: 0 0 8px 0; font-size: 0.95em; }
+        .pain-card p, .opp-card p { font-size: 0.87em; color: #555; margin: 0; line-height: 1.55; }
+        .stat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 20px; }
+        .stat-box { background: #F5F5F5; border-radius: 12px; padding: 12px; text-align: center; }
+        .stat-box .val { font-size: 1.6em; font-weight: 700; }
+        .stat-box .lbl { font-size: 0.78em; color: #999; margin-top: 2px; }
+        .charts-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; }
+        .chart-card { background: #FAFAFA; border-radius: 16px; padding: 16px; border: 1px solid #EEE; }
+        .chart-card h4 { margin: 0 0 10px 0; font-size: 0.82em; color: #888; text-transform: uppercase; letter-spacing: .05em; }
+        .legend-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 8px; font-size: 0.82em; color: #777; align-items: center; }
+        .leg-sq { width: 10px; height: 10px; border-radius: 2px; display: inline-block; margin-right: 3px; vertical-align: middle; }
+        .leg-ci { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 3px; vertical-align: middle; }
+        .tag-pill { font-size: 0.75em; padding: 2px 8px; border-radius: 20px; font-weight: 600; margin-left: 4px; }
+        .fb-row { font-size: 0.87em; color: var(--macaron-text); padding: 5px 0; border-bottom: 0.5px solid #EEE; line-height: 1.6; }
+        .fb-row:last-child { border-bottom: none; }
+        .alt-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+        .alt-card { border-radius: 16px; padding: 18px; border: 2px solid #EEE; background: #FAFAFA; position: relative; }
+        .alt-card.chosen { border-color: #B5EAD7; background: #F0FBF7; }
+        .chosen-badge { position: absolute; top: 10px; right: 10px; background: #B5EAD7; color: #3B8C7A; font-size: 0.72em; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+        .alt-card h4 { margin: 0 0 8px 0; color: #6D6875; font-size: 1em; }
+        .pros { color: #27AE60; font-size: 0.84em; margin: 5px 0; }
+        .cons { color: #E74C3C; font-size: 0.84em; margin: 5px 0; }
+        .alt-card p { font-size: 0.84em; color: #888; margin: 6px 0 0 0; }
+        .fidelity-row { display: flex; align-items: stretch; gap: 0; margin: 16px 0; }
+        .fi-step { flex: 1; text-align: center; padding: 14px 8px; font-size: 0.82em; border-right: 2px solid #fff; }
+        .fi-step:last-child { border-right: none; }
+        .fi-step .fi-pct { font-size: 1.3em; font-weight: 700; display: block; margin-bottom: 4px; }
+        .fi-0 { background: #C7CEEA; border-radius: 12px 0 0 12px; }
+        .fi-1 { background: #A2E1DB; }
+        .fi-2 { background: #85CCC6; }
+        .fi-3 { background: #1D9E75; border-radius: 0 12px 12px 0; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>CPT208: Designing Playful Experiences</h1>
-        <p><strong>Team:</strong> Group C1-3 🌸</p>
-        <p><strong>Selected Topic:</strong> Topic C1 (Running) - <strong>EchoRun</strong></p>
-        <p><em>Eyes-free AI Ghost Pacer: Running with personalized auditory companionship.</em></p>
-    </header>
 
-    <section>
-        <h2>Meet the Team</h2>
-        <div class="card-container">
-            <div class="card" style="border-top-color: var(--macaron-pink);">
-                <img src="images/avatar_xinling.jpg" alt="Avatar" class="card-avatar">
-                <h3 class="card-title">Xinling Du</h3>
-                <p class="card-subtitle">ID: [填入学号]</p>
-                <p class="card-highlight">PM & UI/UX Lead</p>
-                <p class="card-text">Leading the conceptual design of "Glanceable UI" and ensuring the audio-feedback loop provides a seamless playful experience.</p>
-            </div>
-            <div class="card" style="border-top-color: var(--macaron-mint);">
-                <img src="images/avatar_zairan.jpg" alt="Avatar" class="card-avatar">
-                <h3 class="card-title">Zairan Shi</h3>
-                <p class="card-subtitle">ID: [填入学号]</p>
-                <p class="card-highlight">Technical Lead</p>
-                <p class="card-text">Architecting the event-triggered local logic for GPS tracking and integrating the TTS (Text-to-Speech) audio feedback system.</p>
-            </div>
-            <div class="card" style="border-top-color: var(--macaron-blue);">
-                <img src="images/avatar_lingyu.jpg" alt="Avatar" class="card-avatar">
-                <h3 class="card-title">Lingyu Wang</h3>
-                <p class="card-subtitle">ID: [填入学号]</p>
-                <p class="card-highlight">Interaction Designer</p>
-                <p class="card-text">Focusing on "Eyes-free" interaction scenarios, minimizing cognitive load while maximizing emotional engagement during runs.</p>
-            </div>
-            <div class="card" style="border-top-color: var(--macaron-yellow);">
-                <img src="images/avatar_peilin.jpg" alt="Avatar" class="card-avatar">
-                <h3 class="card-title">Peilin Liu</h3>
-                <p class="card-subtitle">ID: [填入学号]</p>
-                <p class="card-highlight">UX Researcher</p>
-                <p class="card-text">Executing the "Wizard of Oz" A/B testing to evaluate how different AI personas (e.g., sarcastic vs. gentle) affect runner motivation.</p>
-            </div>
+<header>
+    <h1>CPT208: Designing Playful Experiences</h1>
+    <p><strong>Team:</strong> Group C1-3 🌸</p>
+    <p><strong>Topic:</strong> C1 (Go Runners) — <strong>EchoRun</strong></p>
+    <p><em>Eyes-free AI Ghost Pacer: Running with personalised auditory companionship.</em></p>
+</header>
+
+<section>
+    <h2>Meet the Team</h2>
+    <div class="card-container">
+        <div class="card" style="border-top-color:var(--macaron-pink);">
+            <img src="images/avatar_xinling.jpg" alt="Avatar" class="card-avatar">
+            <h3 class="card-title">Xinling Du</h3>
+            <p class="card-subtitle">ID: [Student ID]</p>
+            <p class="card-highlight">PM &amp; UI/UX Lead</p>
+            <p class="card-text">Glanceable UI design and audio-feedback loop concept — the visual layer of EchoRun.</p>
         </div>
-    </section>
-
-    <section>
-        <div class="week-tag">Week 2: Topic Lock & Requirements</div>
-        <h2>1. 项目初衷与动机 (Project Motivation)</h2>
-        <p>While running is highly beneficial, it often suffers from a severe lack of immediate emotional reward. Traditional running applications focus exclusively on quantitative metrics (pace, distance, calories). For beginners and casual runners, constantly checking the screen to monitor progress is not only dangerous (introducing a safety hazard) but also critically disrupts their <strong>"Flow State"</strong>.</p>
-        <p><strong>Design Rationale & Problem Gap:</strong> Existing solutions either provide cold, robotic audio updates ("You have run 1 kilometer") or require users to look at their screens to see their virtual progress. There is a distinct lack of <em>hands-free, emotionally intelligent accompaniment</em>.</p>
-        <p><strong>Our Solution: EchoRun.</strong> We introduce an "Eyes-free Event-Triggered AI Ghost Pacer". Runners can choose a distinct AI persona (e.g., a "Toxic Coach" or a "Supportive Friend"). The app monitors the runner's pace locally and triggers highly contextual, witty audio feedback at critical moments (e.g., falling behind, sprinting), turning a solitary workout into an engaging, auditory multiplayer race.</p>
-
-        <hr style="border: 0; border-top: 2px dashed #E2E2E2; margin: 30px 0;">
-
-        <h2>2. 用户画像 (Personas - 10/80/10 AI Principle)</h2>
-        <p>To ensure our audio-feedback design caters to different emotional needs, we adapted our user personas using the 10-80-10 AI workflow to fit the new "EchoRun" concept.</p>
-        
-        <div class="card-container" style="justify-content: flex-start;">
-            <div class="persona-card" style="border-left-color: var(--macaron-blue);">
-                <h3 style="margin-top:0;">Persona 1: The Reluctant Beginner</h3>
-                <p><strong>Name:</strong> Alex Chen (20, Design Student at XJTLU)</p>
-                <p><em>"Jogging alone feels like a chore, and looking at my slow pace on the screen just makes me anxious."</em></p>
-                <p><strong>Frustrations:</strong> Intimidated by visual metrics; gets bored easily; mechanical audio-guides feel like homework.</p>
-                <p><strong>How EchoRun Helps:</strong> Alex can select the "Gentle Supporter" AI persona. Instead of bombarding him with numbers, the AI provides timely, emotionally uplifting verbal encouragement through his earbuds, helping him stay relaxed and focused on his breathing.</p>
-            </div>
-
-            <div class="persona-card" style="border-left-color: var(--macaron-pink);">
-                <h3 style="margin-top:0;">Persona 2: The Tactical Socializer</h3>
-                <p><strong>Name:</strong> Brian Wang (22, CS Student at XJTLU)</p>
-                <p><em>"I need someone to push me. If there's no competition, I lose my motivation to sprint."</em></p>
-                <p><strong>Frustrations:</strong> Misses the adrenaline of team sports; hates pulling out his phone while sprinting to check his ghost data.</p>
-                <p><strong>How EchoRun Helps:</strong> Brian selects the "Sarcastic Coach" persona and races against his friend's previous record. When he falls behind by 10 meters, the AI instantly triggers a snarky audio taunt, fueling his competitive spirit without him needing to glance at the screen.</p>
-            </div>
+        <div class="card" style="border-top-color:var(--macaron-mint);">
+            <img src="images/avatar_zairan.jpg" alt="Avatar" class="card-avatar">
+            <h3 class="card-title">Zairan Shi</h3>
+            <p class="card-subtitle">ID: [Student ID]</p>
+            <p class="card-highlight">Technical Lead</p>
+            <p class="card-text">Event-triggered local logic, GPS tracking, and TTS audio pipeline architecture.</p>
         </div>
-
-        <div class="ai-reflection">
-            <h4>🤖 AI 使用记录与反思 (Technical Reflection)</h4>
-            <p><strong>Task:</strong> Pivoting project direction, refining technical architecture, and adapting Personas.</p>
-            <p><strong>Process & Prompting:</strong> We utilized conversational AI to pivot from our previous LBS turf-war idea to a more running-centric solution. We discussed the cognitive load of interacting with screens while running and the high cost/latency of using real-time AI Agents.</p>
-            <p><strong>Human Refinement & Decision:</strong> We rejected the complex Agent architecture in favor of a <strong>"Glanceable UI + Event-Triggered Local Logic"</strong>. We decided to adopt the <em>"Wizard of Oz"</em> evaluation method for our prototype, pre-rendering AI persona voices (TTS) to perfectly simulate the emotional impact of the audio without the API latency, allowing us to focus strictly on testing the HCI experience.</p>
+        <div class="card" style="border-top-color:var(--macaron-blue);">
+            <img src="images/avatar_lingyu.jpg" alt="Avatar" class="card-avatar">
+            <h3 class="card-title">Lingyu Wang</h3>
+            <p class="card-subtitle">ID: [Student ID]</p>
+            <p class="card-highlight">Interaction Designer</p>
+            <p class="card-text">Eyes-free interaction scenarios, user journey mapping, and design alternative analysis.</p>
         </div>
-    </section>
+        <div class="card" style="border-top-color:var(--macaron-yellow);">
+            <img src="images/avatar_peilin.jpg" alt="Avatar" class="card-avatar">
+            <h3 class="card-title">Peilin Liu</h3>
+            <p class="card-subtitle">ID: [Student ID]</p>
+            <p class="card-highlight">UX Researcher</p>
+            <p class="card-text">Wizard of Oz A/B study design, data analysis, and early evaluation reporting.</p>
+        </div>
+    </div>
+</section>
 
-    <section>
-        <div class="week-tag" style="background: var(--macaron-pink);">Week 4: User Journey & Prototyping</div>
-        <h2>交互旅程与原型 (Coming Soon)</h2>
-        <p>This section will include our "Glanceable UI" designs and the A/B testing results comparing different AI audio personas.</p>
-    </section>
+<section>
+    <div class="week-tag">Week 2: Motivation &amp; Personas</div>
+    <h2>1. Project Motivation</h2>
+    <p>Running is beneficial yet emotionally unrewarding in isolation. Existing apps focus exclusively on quantitative metrics — pace, distance, calories — delivered via cold robotic announcements or screens that demand visual attention. Glancing at a phone while running is a safety hazard and critically disrupts the <strong>Flow State</strong>.</p>
+    <p style="margin-top:10px;"><strong>The Gap:</strong> There is no <em>hands-free, emotionally intelligent, real-time companionship layer</em> in current running products. EchoRun fills this gap with an event-triggered AI ghost pacer that speaks to the runner through their earbuds — zero screen required.</p>
+
+    <hr class="divider">
+    <h2>2. Personas</h2>
+    <div class="card-container" style="justify-content:flex-start;">
+        <div class="persona-card" style="border-left-color:var(--macaron-blue);">
+            <h3 style="margin-top:0;">Persona 1 — The Reluctant Beginner</h3>
+            <p><strong>Alex Chen</strong> · 20 · Design student at XJTLU</p>
+            <p><em>"Jogging alone feels like a chore, and looking at my slow pace on the screen just makes me anxious."</em></p>
+            <p><strong>Pain:</strong> Intimidated by visual metrics; mechanical audio feels impersonal; easily bored.</p>
+            <p><strong>EchoRun fit:</strong> Selects "Gentle Supporter" persona — emotionally uplifting verbal cues replace anxious screen-checking.</p>
+        </div>
+        <div class="persona-card" style="border-left-color:var(--macaron-pink);">
+            <h3 style="margin-top:0;">Persona 2 — The Tactical Socialiser</h3>
+            <p><strong>Brian Wang</strong> · 22 · CS student at XJTLU</p>
+            <p><em>"I need someone to push me. Without competition, I lose my motivation to sprint."</em></p>
+            <p><strong>Pain:</strong> Misses team-sport adrenaline; hates pulling out his phone mid-sprint to check ghost data.</p>
+            <p><strong>EchoRun fit:</strong> Selects "Sarcastic Coach" and races a friend's record — snarky taunts trigger competitive surges without any screen interaction.</p>
+        </div>
+    </div>
+
+    <div class="ai-reflection">
+        <h4>🤖 AI Usage — Week 2</h4>
+        <p><strong>Task:</strong> Pivoting project direction and adapting personas to the EchoRun concept.</p>
+        <p><strong>Decision:</strong> We rejected a complex real-time LLM-Agent architecture in favour of <em>Glanceable UI + Event-Triggered Local Logic</em> and adopted the Wizard of Oz evaluation method — pre-rendering TTS voices to test the HCI experience without API latency.</p>
+        <p style="font-size:0.85em;color:#aaa;margin-top:8px;">Citation: Claude Sonnet 4.6, accessed 2026-03-30, https://claude.ai. Used for persona refinement and project-direction pivoting.</p>
+    </div>
+</section>
+
+<section>
+    <div class="week-tag" style="background:#FFB7B2;">Week 4: Journey Map, Evaluation &amp; Alternatives</div>
+
+    <h2>3. User Journey Map — Current State</h2>
+    <div class="journey-intro">
+        <strong>Persona:</strong> Brian Wang (Persona 2) &nbsp;|&nbsp;
+        <strong>Scenario:</strong> Ghost-run against a friend's record using EchoRun &nbsp;|&nbsp;
+        <strong>Map type:</strong> Current State — identifying real friction points to drive design decisions
+    </div>
+
+    <div class="journey-wrap">
+        <table class="journey-table">
+            <thead>
+                <tr>
+                    <th style="min-width:90px;">Stage</th>
+                    <th>① Pre-run Setup</th>
+                    <th>② Ghost Selection</th>
+                    <th>③ Running — Ahead</th>
+                    <th>④ Running — Behind</th>
+                    <th>⑤ AI Coach Trigger</th>
+                    <th>⑥ Post-run Review</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="stage-label">Actions</td>
+                    <td>Opens EchoRun, chooses "Sarcastic Coach" persona</td>
+                    <td>Browses friends' public records; picks a target to beat</td>
+                    <td>Holds pace; monitors gap on glanceable UI with one glance</td>
+                    <td>Pace drops; ghost pulls ahead; gap widens</td>
+                    <td>Earpiece fires sarcastic taunt; Brian accelerates instinctively</td>
+                    <td>Reviews pace chart and gap timeline; considers sharing result</td>
+                </tr>
+                <tr>
+                    <td class="stage-label">Thoughts</td>
+                    <td>"I want something that actually pushes me."</td>
+                    <td>"My friend did 5 km in 26 min — I can beat that."</td>
+                    <td>"This is going well — I don't need to check my phone."</td>
+                    <td>"I'm losing ground but I don't want to look at the screen."</td>
+                    <td>"Did it just say that?! Fine — I'll prove it wrong."</td>
+                    <td>"Nearly caught up. I'll break the record next time."</td>
+                </tr>
+                <tr>
+                    <td class="stage-label">Emotion</td>
+                    <td><span class="emotion-mid">● Neutral</span></td>
+                    <td><span class="emotion-high">● Excited</span></td>
+                    <td><span class="emotion-high">● Confident</span></td>
+                    <td><span class="emotion-low">● Frustrated</span></td>
+                    <td><span class="emotion-high">● Surge of rivalry</span></td>
+                    <td><span class="emotion-high">● Accomplished</span></td>
+                </tr>
+                <tr>
+                    <td class="stage-label">Pain Points</td>
+                    <td>Onboarding requires too many taps</td>
+                    <td>No sorting by distance or difficulty</td>
+                    <td>—</td>
+                    <td><strong>No feedback unless he looks at screen — core pain</strong></td>
+                    <td>Risk of audio delay breaking the emotional moment</td>
+                    <td>Wants richer breakdown and social sharing</td>
+                </tr>
+                <tr>
+                    <td class="stage-label">Opportunities</td>
+                    <td>Streamline persona selection to under 2 taps</td>
+                    <td>Filter friends by distance and pace range</td>
+                    <td>Keep glanceable UI to one large number</td>
+                    <td><strong>Audio trigger = core EchoRun value proposition</strong></td>
+                    <td>Minimise latency via local rule engine (under 200 ms)</td>
+                    <td>Add challenge-back button and social share</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top:24px;">
+        <div class="curve-label">Emotional journey curve</div>
+        <svg viewBox="0 0 700 180" width="100%" xmlns="http://www.w3.org/2000/svg" style="background:#FAFAFA;border-radius:12px;border:1px solid #EEE;">
+            <line x1="60" y1="30"  x2="680" y2="30"  stroke="#EEE" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="60" y1="75"  x2="680" y2="75"  stroke="#EEE" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="60" y1="120" x2="680" y2="120" stroke="#EEE" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="60" y1="155" x2="680" y2="155" stroke="#EEE" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="54" y="34"  font-size="10" fill="#27AE60" text-anchor="end" font-weight="600">Delight</text>
+            <text x="54" y="79"  font-size="10" fill="#F39C12" text-anchor="end" font-weight="600">Neutral</text>
+            <text x="54" y="124" font-size="10" fill="#E74C3C" text-anchor="end" font-weight="600">Frustrated</text>
+            <polyline points="90,75 200,60 310,35 420,140 530,45 640,50" fill="none" stroke="#FFB7B2" stroke-width="3" stroke-linejoin="round"/>
+            <circle cx="90"  cy="75"  r="6" fill="#C7CEEA" stroke="#fff" stroke-width="2"/>
+            <circle cx="200" cy="60"  r="6" fill="#85CCC6" stroke="#fff" stroke-width="2"/>
+            <circle cx="310" cy="35"  r="6" fill="#1D9E75" stroke="#fff" stroke-width="2"/>
+            <circle cx="420" cy="140" r="8" fill="#D85A30" stroke="#fff" stroke-width="2"/>
+            <circle cx="530" cy="45"  r="8" fill="#1D9E75" stroke="#fff" stroke-width="2"/>
+            <circle cx="640" cy="50"  r="6" fill="#85CCC6" stroke="#fff" stroke-width="2"/>
+            <text x="90"  y="175" font-size="9" fill="#888" text-anchor="middle">Setup</text>
+            <text x="200" y="175" font-size="9" fill="#888" text-anchor="middle">Select</text>
+            <text x="310" y="175" font-size="9" fill="#888" text-anchor="middle">Ahead</text>
+            <text x="420" y="175" font-size="9" fill="#D85A30" text-anchor="middle" font-weight="600">Behind</text>
+            <text x="530" y="175" font-size="9" fill="#1D9E75" text-anchor="middle" font-weight="600">AI Trigger</text>
+            <text x="640" y="175" font-size="9" fill="#888" text-anchor="middle">Review</text>
+            <line x1="420" y1="148" x2="420" y2="162" stroke="#D85A30" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <text x="432" y="157" font-size="9" fill="#D85A30">Core pain point</text>
+            <text x="542" y="38" font-size="9" fill="#1D9E75">AI taunt fires here</text>
+        </svg>
+        <p style="font-size:0.82em;color:#aaa;margin-top:6px;">Curve plotted from primary observations and Wizard of Oz study participant verbal feedback (n = 8). The steepest emotional dip at stage ④ directly motivates EchoRun's eyes-free audio design.</p>
+    </div>
+
+    <div class="insight-box">
+        <div class="pain-card">
+            <h4>Core Pain Point</h4>
+            <p><strong>The "Silent Drop":</strong> When Brian falls behind, there is zero feedback unless he glances at his screen. Like the "Black Box Wait" scenario in lecture, the user feels a total loss of control — and unlike that case, looking down mid-sprint is physically dangerous.</p>
+        </div>
+        <div class="opp-card">
+            <h4>Design Opportunity</h4>
+            <p><strong>Proactive Audio Transparency:</strong> The event-triggered AI coach fires a contextual audio cue the moment the distance gap crosses a threshold. This converts the frustration dip into a motivational spike — directly addressing the deepest drop-off on the emotional curve.</p>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <h2>4. Early Evaluation — Wizard of Oz Study</h2>
+    <p style="margin-bottom:14px;">Following the WoZ prototyping method (CPT208 Lecture 03), we pre-recorded two audio conditions and had 8 XJTLU students evaluate them — testing the <em>HCI experience</em> before committing to production AI integration.</p>
+
+    <div class="stat-row">
+        <div class="stat-box"><div class="val">8</div><div class="lbl">Participants</div></div>
+        <div class="stat-box"><div class="val" style="color:#1D9E75;">88%</div><div class="lbl">Prefer persona voice</div></div>
+        <div class="stat-box"><div class="val" style="color:#185FA5;">4.75<span style="font-size:0.55em;font-weight:400;">/5</span></div><div class="lbl">Motivation score (B)</div></div>
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-card">
+            <h4>Motivation score comparison (Q1 vs Q2)</h4>
+            <div class="legend-row">
+                <span><span class="leg-sq" style="background:#B4B2A9;"></span>Audio A <span class="tag-pill" style="background:#E6F1FB;color:#0C447C;">Mechanical</span></span>
+                <span><span class="leg-sq" style="background:#1D9E75;"></span>Audio B <span class="tag-pill" style="background:#FAECE7;color:#712B13;">Sarcastic</span></span>
+            </div>
+            <svg viewBox="0 0 260 165" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <line x1="36" y1="10" x2="36" y2="130" stroke="#ccc" stroke-width="0.5"/>
+                <line x1="36" y1="130" x2="255" y2="130" stroke="#ccc" stroke-width="0.5"/>
+                <line x1="36" y1="106" x2="255" y2="106" stroke="#eee" stroke-width="0.5" stroke-dasharray="3,2"/>
+                <line x1="36" y1="82"  x2="255" y2="82"  stroke="#eee" stroke-width="0.5" stroke-dasharray="3,2"/>
+                <line x1="36" y1="58"  x2="255" y2="58"  stroke="#eee" stroke-width="0.5" stroke-dasharray="3,2"/>
+                <line x1="36" y1="34"  x2="255" y2="34"  stroke="#eee" stroke-width="0.5" stroke-dasharray="3,2"/>
+                <line x1="36" y1="10"  x2="255" y2="10"  stroke="#eee" stroke-width="0.5" stroke-dasharray="3,2"/>
+                <text x="30" y="133" font-size="9" fill="#aaa" text-anchor="end">0</text>
+                <text x="30" y="85"  font-size="9" fill="#aaa" text-anchor="end">2</text>
+                <text x="30" y="37"  font-size="9" fill="#aaa" text-anchor="end">4</text>
+                <text x="30" y="13"  font-size="9" fill="#aaa" text-anchor="end">5</text>
+                <rect x="50" y="58"  width="28" height="72"  fill="#B4B2A9" rx="3"/>
+                <text x="64" y="54"  font-size="9" fill="#888" text-anchor="middle">3.0</text>
+                <rect x="82" y="16"  width="28" height="114" fill="#1D9E75" rx="3"/>
+                <text x="96" y="12"  font-size="9" fill="#1D9E75" text-anchor="middle">4.75</text>
+                <text x="80" y="148" font-size="9" fill="#aaa" text-anchor="middle">Motivation</text>
+                <rect x="148" y="22" width="28" height="108" fill="#1D9E75" rx="3"/>
+                <text x="162" y="18" font-size="9" fill="#1D9E75" text-anchor="middle">4.5</text>
+                <text x="162" y="148" font-size="9" fill="#aaa" text-anchor="middle">Competition</text>
+                <rect x="210" y="73" width="28" height="57"  fill="#EF9F27" rx="3"/>
+                <text x="224" y="69" font-size="9" fill="#854F0B" text-anchor="middle">2.38</text>
+                <text x="224" y="148" font-size="9" fill="#aaa" text-anchor="middle">Offence</text>
+            </svg>
+        </div>
+        <div class="chart-card">
+            <h4>Audio preference (Q3, n = 8)</h4>
+            <div class="legend-row">
+                <span><span class="leg-ci" style="background:#1D9E75;"></span>Sarcastic B 88%</span>
+                <span><span class="leg-ci" style="background:#B4B2A9;"></span>Mechanical A 12%</span>
+            </div>
+            <svg viewBox="0 0 200 155" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="80" r="55" fill="none" stroke="#1D9E75" stroke-width="22" stroke-dasharray="304.1 345.6" stroke-dashoffset="86.4"/>
+                <circle cx="100" cy="80" r="55" fill="none" stroke="#B4B2A9" stroke-width="22" stroke-dasharray="41.5 345.6" stroke-dashoffset="-217.7"/>
+                <circle cx="100" cy="80" r="33" fill="#FAFAFA"/>
+                <text x="100" y="76" font-size="18" font-weight="600" fill="#1D9E75" text-anchor="middle">88%</text>
+                <text x="100" y="91" font-size="10" fill="#aaa" text-anchor="middle">prefer B</text>
+            </svg>
+        </div>
+        <div class="chart-card" style="grid-column:1/-1;">
+            <h4>Descriptions of Audio B — Sarcastic persona (Q6, multiple choice, n = 8)</h4>
+            <div class="legend-row">
+                <span><span class="leg-sq" style="background:#1D9E75;"></span>Positive</span>
+                <span><span class="leg-sq" style="background:#EF9F27;"></span>Neutral</span>
+                <span><span class="leg-sq" style="background:#D85A30;"></span>Negative</span>
+            </div>
+            <svg viewBox="0 0 500 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+                <text x="106" y="19"  font-size="11" fill="#666" text-anchor="end">Motivating</text>
+                <rect x="110" y="8"   width="200" height="16" fill="#1D9E75" rx="3"/>
+                <text x="316" y="20"  font-size="11" fill="#1D9E75">62%</text>
+                <text x="106" y="43"  font-size="11" fill="#666" text-anchor="end">Engaging</text>
+                <rect x="110" y="32"  width="161" height="16" fill="#1D9E75" rx="3"/>
+                <text x="276" y="44"  font-size="11" fill="#1D9E75">50%</text>
+                <text x="106" y="67"  font-size="11" fill="#666" text-anchor="end">Relatable</text>
+                <rect x="110" y="56"  width="122" height="16" fill="#1D9E75" rx="3"/>
+                <text x="237" y="68"  font-size="11" fill="#1D9E75">38%</text>
+                <text x="106" y="91"  font-size="11" fill="#666" text-anchor="end">Funny</text>
+                <rect x="110" y="80"  width="122" height="16" fill="#1D9E75" rx="3"/>
+                <text x="237" y="92"  font-size="11" fill="#1D9E75">38%</text>
+                <text x="106" y="115" font-size="11" fill="#666" text-anchor="end">Too harsh</text>
+                <rect x="110" y="104" width="38"  height="16" fill="#EF9F27" rx="3"/>
+                <text x="153" y="116" font-size="11" fill="#854F0B">12%</text>
+                <text x="106" y="139" font-size="11" fill="#666" text-anchor="end">Offensive</text>
+                <rect x="110" y="128" width="38"  height="16" fill="#D85A30" rx="3"/>
+                <text x="153" y="140" font-size="11" fill="#712B13">12%</text>
+            </svg>
+        </div>
+    </div>
+
+    <div style="background:#F0FBF7;border-radius:12px;padding:14px 18px;margin-top:16px;">
+        <div style="font-size:0.82em;font-weight:600;color:#0F6E56;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Key qualitative feedback (Q7 and Q8)</div>
+        <div class="fb-row">"So good" · "Could roast me even harder" · "Love the persona voice"</div>
+        <div class="fb-row">Suggestions: keep it playful not harsh · add encouragement occasionally · inspired by in-game commentators (Honor of Kings)</div>
+        <div class="fb-row">Design insight: users want switchable personas — sarcastic / encouraging / chill — validating our persona selection screen as a must-have feature</div>
+    </div>
+
+    <hr class="divider">
+
+    <h2>5. Design Alternatives and Fidelity Rationale</h2>
+    <p style="margin-bottom:8px;">We evaluated three interaction paradigms. Per the lecture fidelity guidance, we chose the prototype type that answers our <em>core hypothesis</em> with the cheapest, fastest method — not the most polished one.</p>
+
+    <div class="fidelity-row">
+        <div class="fi-step fi-0"><span class="fi-pct">0%</span><span class="fi-label">Whiteboard sketch</span></div>
+        <div class="fi-step fi-1"><span class="fi-pct">30%</span><span class="fi-label">Paper wireframe</span></div>
+        <div class="fi-step fi-2"><span class="fi-pct" style="color:#fff;">70%</span><span class="fi-label" style="color:#fff;">WoZ + Figma — we are here</span></div>
+        <div class="fi-step fi-3"><span class="fi-pct" style="color:#fff;">99%</span><span class="fi-label" style="color:#fff;">Coded live system</span></div>
+    </div>
+
+    <div class="alt-grid">
+        <div class="alt-card">
+            <h4>Option A — Continuous Screen Display</h4>
+            <p style="color:#999;font-size:0.8em;margin-bottom:6px;">Always-on visual dashboard (Strava-style)</p>
+            <p class="pros">✔ Familiar to experienced runners<br>✔ Rich data visibility</p>
+            <p class="cons">✘ Requires repeated screen glances<br>✘ Safety hazard on roads<br>✘ Breaks Flow State</p>
+            <p><strong>Rejected</strong> — contradicts our eyes-free principle and increases cognitive load, the exact problem we aim to solve.</p>
+        </div>
+        <div class="alt-card">
+            <h4>Option B — Real-time AI Agent</h4>
+            <p style="color:#999;font-size:0.8em;margin-bottom:6px;">Live LLM call on every trigger event</p>
+            <p class="pros">✔ Fully dynamic responses<br>✔ More conversational feel</p>
+            <p class="cons">✘ API latency 1 to 3 seconds destroys the emotional moment<br>✘ Requires constant network<br>✘ Cost unsustainable at free tier</p>
+            <p><strong>Rejected</strong> — high fidelity that limits our ability to rapidly pivot if the concept fails, exactly the trade-off warned against in the lecture.</p>
+        </div>
+        <div class="alt-card chosen">
+            <span class="chosen-badge">✓ Chosen</span>
+            <h4>Option C — Glanceable UI + Event-Triggered Local Audio</h4>
+            <p style="color:#999;font-size:0.8em;margin-bottom:6px;">Local rule engine + pre-rendered persona TTS</p>
+            <p class="pros">✔ Zero-latency audio under 200 ms<br>✔ Works fully offline<br>✔ WoZ-testable at 70% fidelity<br>✔ Matches prototype fidelity to the question we need to answer now</p>
+            <p class="cons">✘ Pre-scripted responses less varied<br>✘ Threshold calibration needed</p>
+            <p><strong>Chosen</strong> — best supports runner Flow State, enables safe eyes-free use, and lets us validate our core hypothesis via a WoZ study before committing to full AI integration.</p>
+        </div>
+    </div>
+
+    <div class="ai-reflection">
+        <h4>🤖 AI Usage — Week 4</h4>
+        <p><strong>Questionnaire and data analysis:</strong> Claude (Anthropic) structured the WoZ Likert questionnaire and computed descriptive statistics from raw survey data (n = 8, collected via WeChat).</p>
+        <p><strong>Chart and portfolio generation:</strong> All inline SVG charts and updated HTML were generated with Claude assistance based on real collected data and lecture content from CPT208 Week 3.</p>
+        <p><strong>Human verification:</strong> All statistical figures were cross-checked against the raw Excel export. Journey map, emotion curve, and design decisions are the group's original work grounded in primary user observation.</p>
+        <p style="font-size:0.85em;color:#aaa;margin-top:8px;">Citation: Claude Sonnet 4.6, accessed 2026-03-30, https://claude.ai. Used for questionnaire design, data analysis, SVG chart generation, and HTML portfolio development assistance.</p>
+    </div>
+</section>
+
+<section>
+    <div class="week-tag" style="background:var(--macaron-blue);color:#3B8C7A;">Week 6–8: Prototypes and System</div>
+    <h2>6. Prototypes and High-fi System <span style="font-size:0.6em;color:#ccc;">(coming soon)</span></h2>
+    <p>This section will document the low-fi sketch to Figma clickable prototype to deployed web prototype evolution, including the system architecture diagram, individual contribution table, and usability testing results.</p>
+</section>
+
 </body>
 </html>
