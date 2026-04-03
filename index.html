@@ -127,10 +127,92 @@
 <section>
     <div class="week-tag">Week 2: Motivation &amp; Personas</div>
     <h2>1. Project Motivation</h2>
-    <p>Running is beneficial yet emotionally unrewarding in isolation. Existing apps focus exclusively on quantitative metrics — pace, distance, calories — delivered via cold robotic announcements or screens that demand visual attention. Glancing at a phone while running is a safety hazard and critically disrupts the <strong>Flow State</strong>.</p>
-    <p style="margin-top:10px;"><strong>The Gap:</strong> There is no <em>hands-free, emotionally intelligent, real-time companionship layer</em> in current running products. EchoRun fills this gap with an event-triggered AI ghost pacer that speaks to the runner through their earbuds — zero screen required.</p>
+    <p>The surge in AI technology and the growing trend of public fitness have accelerated the development of running-assistive applications. However, despite its popularity, maintaining long-term motivation remains a critical challenge, often leading to high dropout rates. Our field interviews indicate that many solo runners experience feedback poverty, where the lack of immediate reinforcement results in fatigue and disengagement.
+
+      <br> From an Equality, Diversity, and Inclusion perspective, many existing solutions rely heavily on visual interaction, which can be inaccessible or unsafe during physical activity. This highlights the need for more inclusive, eyes-free interaction modalities. Furthermore, prior research suggests that fitness gamification often lacks a clear balance between engagement and domain appropriateness [1], limiting its long-term effectiveness.
+      <br> Guided by Self-Determination Theory, this project aims to enhance users’ sense of competence and autonomy through meaningful feedback and adaptive interaction. In addition, studies show that humanized AI design can significantly improve user immersion and engagement [2]. Therefore, EchoRun explores a human-centric approach to delivering real-time, personalized, and non-visual feedback to support a more engaging and sustainable running experience..</p>
+    <p style="margin-top:20px;"></p>
 
     <hr class="divider">
+    <h2>2. Gap</h2>
+<p>Four competitor products are analysed to identify design opportunities:</p>
+
+<div class="card-container" style="flex-direction:column; gap:30px; margin-top:20px;">
+    <div class="persona-card" style="border-left-color:var(--macaron-purple);">
+        <h3>Strava</h3>
+        <p><strong>Strengths</strong></p>
+        <ul>
+            <li>Strong social comparison through leaderboards and segments, enhancing motivation.</li>
+            <li>Detailed tracking of pace, distance, and historical performance.</li>
+            <li>Supports asynchronous competition with others and past records.</li>
+        </ul>
+
+        <p><strong>Weaknesses</strong></p>
+        <ul>
+            <li>Lacks real-time competitive feedback during running.</li>
+            <li>Over-reliance on visual interaction, which disrupts running flow.</li>
+            <li>Fragmented feedback, lacking continuous performance awareness.</li>
+        </ul>
+    </div>
+
+    <!-- Codoon -->
+    <div class="persona-card" style="border-left-color:var(--macaron-blue);">
+        <h3>Codoon</h3>
+
+        <p><strong>Strengths</strong></p>
+        <ul>
+            <li>Professional AI voice coaching with real-time training suggestions.</li>
+            <li>Long-term data tracking enabling personalized feedback.</li>
+            <li>Advanced features like Pace Rabbit for structured performance improvement.</li>
+        </ul>
+
+        <p><strong>Weaknesses</strong></p>
+        <ul>
+            <li>Lacks competitive elements to stimulate motivation.</li>
+            <li>No customizable AI personality, leading to rigid interaction.</li>
+            <li>Voice feedback lacks dynamic adaptation in competitive scenarios.</li>
+        </ul>
+    </div>
+
+    <!-- Yodo Run -->
+    <div class="persona-card" style="border-left-color:var(--macaron-pink);">
+        <h3>Yodo Run</h3>
+
+        <p><strong>Strengths</strong></p>
+        <ul>
+            <li>Diverse reward system combining cash and virtual incentives.</li>
+            <li>Leveling and medal systems enhance engagement.</li>
+            <li>AI-based motion analysis and personalized training plans.</li>
+        </ul>
+
+        <p><strong>Weaknesses</strong></p>
+        <ul>
+            <li>Monetary rewards may undermine intrinsic motivation.</li>
+            <li>Data synchronization issues reduce trust in rewards.</li>
+            <li>Restrictions on rewards reduce actual incentive effectiveness.</li>
+        </ul>
+    </div>
+
+    <!-- Walkr -->
+    <div class="persona-card" style="border-left-color:var(--macaron-mint);">
+        <h3>Walkr</h3>
+
+        <p><strong>Strengths</strong></p>
+        <ul>
+            <li>Highly engaging gamified experience with strong entertainment value.</li>
+            <li>Low barrier to entry, suitable for beginners.</li>
+            <li>Frequent rewards provide immediate positive reinforcement.</li>
+        </ul>
+
+        <p><strong>Weaknesses</strong></p>
+        <ul>
+            <li>Lacks exercise-specific feedback and training value.</li>
+            <li>Weak linkage between physical activity and game mechanics.</li>
+            <li>Limited data depth reduces usefulness for performance-oriented users.</li>
+        </ul>
+    </div>
+
+</div>
     <h2>2. Personas</h2>
     <div class="card-container" style="justify-content:flex-start;">
         <div class="persona-card" style="border-left-color:var(--macaron-blue);">
