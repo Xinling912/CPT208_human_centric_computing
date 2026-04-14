@@ -127,27 +127,227 @@
 <section>
     <div class="week-tag">Week 2: Motivation &amp; Personas</div>
     <h2>1. Project Motivation</h2>
-    <p>Running is beneficial yet emotionally unrewarding in isolation. Existing apps focus exclusively on quantitative metrics — pace, distance, calories — delivered via cold robotic announcements or screens that demand visual attention. Glancing at a phone while running is a safety hazard and critically disrupts the <strong>Flow State</strong>.</p>
-    <p style="margin-top:10px;"><strong>The Gap:</strong> There is no <em>hands-free, emotionally intelligent, real-time companionship layer</em> in current running products. EchoRun fills this gap with an event-triggered AI ghost pacer that speaks to the runner through their earbuds — zero screen required.</p>
+    <p>The surge in AI technology and the growing trend of public fitness have accelerated the development of running-assistive applications. However, despite its popularity, maintaining long-term motivation remains a critical challenge, often leading to high dropout rates. Our field interviews indicate that many solo runners experience feedback poverty, where the lack of immediate reinforcement results in fatigue and disengagement.
+
+      <br> From an Equality, Diversity, and Inclusion perspective, many existing solutions rely heavily on visual interaction, which can be inaccessible or unsafe during physical activity. This highlights the need for more inclusive, eyes-free interaction modalities. Furthermore, prior research suggests that fitness gamification often lacks a clear balance between engagement and domain appropriateness [1], limiting its long-term effectiveness.
+      <br> Guided by Self-Determination Theory, this project aims to enhance users’ sense of competence and autonomy through meaningful feedback and adaptive interaction. In addition, studies show that humanized AI design can significantly improve user immersion and engagement [2]. Therefore, EchoRun explores a human-centric approach to delivering real-time, personalized, and non-visual feedback to support a more engaging and sustainable running experience..</p>
+    <p style="margin-top:20px;"></p>
 
     <hr class="divider">
-    <h2>2. Personas</h2>
-    <div class="card-container" style="justify-content:flex-start;">
-        <div class="persona-card" style="border-left-color:var(--macaron-blue);">
-            <h3 style="margin-top:0;">Persona 1 — The Reluctant Beginner</h3>
-            <p><strong>Alex Chen</strong> · 20 · Design student at XJTLU</p>
-            <p><em>"Jogging alone feels like a chore, and looking at my slow pace on the screen just makes me anxious."</em></p>
-            <p><strong>Pain:</strong> Intimidated by visual metrics; mechanical audio feels impersonal; easily bored.</p>
-            <p><strong>EchoRun fit:</strong> Selects "Gentle Supporter" persona — emotionally uplifting verbal cues replace anxious screen-checking.</p>
-        </div>
-        <div class="persona-card" style="border-left-color:var(--macaron-pink);">
-            <h3 style="margin-top:0;">Persona 2 — The Tactical Socialiser</h3>
-            <p><strong>Brian Wang</strong> · 22 · CS student at XJTLU</p>
-            <p><em>"I need someone to push me. Without competition, I lose my motivation to sprint."</em></p>
-            <p><strong>Pain:</strong> Misses team-sport adrenaline; hates pulling out his phone mid-sprint to check ghost data.</p>
-            <p><strong>EchoRun fit:</strong> Selects "Sarcastic Coach" and races a friend's record — snarky taunts trigger competitive surges without any screen interaction.</p>
+    <h2>2. Gap</h2>
+<p>Four competitor products are analysed to identify design opportunities:</p>
+
+<style>
+    :root {
+        --macaron-purple: #b28cf7;
+        --macaron-blue: #87cefa;
+        --macaron-pink: #ffb6c1;
+        --macaron-mint: #98fb98;
+    }
+
+    .gap-grid-v2 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    .product-row {
+        border: 1px solid #eee;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .product-name {
+        padding: 10px 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .split-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 400px; /* 设置固定高度以激活滚动 */
+    }
+
+    .scroll-pane {
+        padding: 15px 20px;
+        overflow-y: auto; /* 允许各自滚动 */
+        scrollbar-width: thin;
+    }
+
+    /* 左边优点栏样式 */
+    .pane-strengths {
+        border-right: 1px solid #f0f0f0;
+        background-color: rgba(255,255,255,0.5);
+    }
+
+    /* 右边缺点栏样式 */
+    .pane-weaknesses {
+        background-color: #fafafa;
+    }
+
+    .section-title {
+        font-size: 0.85rem;
+        font-weight: 800;
+        margin-bottom: 10px;
+        position: sticky;
+        top: 0;
+        background: inherit;
+        padding: 2px 0;
+    }
+
+    .strength-title { color: #2d8a2d; }
+    .weakness-title { color: #d9534f; }
+
+    ul {
+        margin: 0;
+        padding-left: 18px;
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    li { margin-bottom: 8px; color: #444; }
+
+    /* 自定义滚动条样式 */
+    .scroll-pane::-webkit-scrollbar { width: 4px; }
+    .scroll-pane::-webkit-scrollbar-thumb { background: #ddd; border-radius: 10px; }
+</style>
+
+<div class="gap-grid-v2">
+
+    <div class="product-row">
+        <div class="product-name" style="background-color: var(--macaron-purple);">Strava</div>
+        <div class="split-content">
+            <div class="scroll-pane pane-strengths">
+                <div class="section-title strength-title">▲ Strengths</div>
+                <ul>
+                    <li><strong>Social Comparison Framework:</strong> Strava provides a well-established social comparison framework through features such as leaderboards, segment rankings, and friend activity feeds. These mechanisms effectively motivate users by enabling performance comparison with others, which has been shown to enhance engagement and persistence in physical activity.</li>
+                    <li><strong>Precision Metrics:</strong> Strava offers detailed tracking of running metrics such as pace, distance, time, and historical trends. This allows users to monitor progress over time and supports goal-oriented behavior through data-driven feedback.</li>
+                    <li><strong>Asynchronous Competition:</strong> Strava supports asynchronous competition by allowing users to compare their performance on predefined route segments against both their past records and other users. This enables flexible competition without requiring simultaneous participation, lowering the barrier to engagement.</li>
+                </ul>
+            </div>
+            <div class="scroll-pane pane-weaknesses">
+                <div class="section-title weakness-title">▼ Weaknesses</div>
+                <ul>
+                    <li><strong>Post-hoc Interaction:</strong> The app lacks real-time competitive feedback. While Strava enables performance comparison through segments and leaderboards, these comparisons are primarily post-activity. Users typically review their rankings and statistics only after completing a run, which limits the ability to influence motivation during the activity itself.</li>
+                    <li><strong>Visual Over-reliance:</strong> It is over-reliance on visual and post-hoc data interaction. Strava’s interaction model is heavily dependent on visual interfaces and data dashboards. During running, users have limited access to actionable feedback without actively checking their devices, where visual feedback during running may overburden the human visual perception and the need to interact with a device will divert attention from the surrounding environment[3 real time feedback] . Additionally, the platform lacks real-time, voice-based or emotionally adaptive feedback mechanisms.</li>
+                    <li><strong>Fragmented Awareness:</strong> It lacks limited contextual and continuous performance awareness. While Strava supports comparison through segments and historical records, its feedback is fragmented and context-dependent. Users receive insights only at specific checkpoints rather than as a continuous, evolving representation of their performance relative to others or past efforts.</li>
+                </ul>
+            </div>
         </div>
     </div>
+
+    <div class="product-row">
+        <div class="product-name" style="background-color: var(--macaron-blue);">Codoon</div>
+        <div class="split-content">
+            <div class="scroll-pane pane-strengths">
+                <div class="section-title strength-title">▲ Strengths</div>
+                <ul>
+                    <li><strong>Professional AI Coaching:</strong> The voice guidance of the AI coach is highly professional and scientific. The coach will give customers professional suggestions such as movement correction, rhythm adjustment and exercise intensity control by combining real-time sports data.</li>
+                    <li><strong>Long-term Memory:</strong> The AI coach has a long-term memory function, which can record all-dimensional user data such as body’s feedback, habit and preference. It continuously optimizes the personalization of the voice feedback based on data accumulation, evolving from generalized suggestions to exclusive guidance tailored to the users personal sports ability.</li>
+                    <li><strong>Pace Rabbit Feature:</strong> The app is equipped with a dedicated Pace Rabbit AI feature, where the function creates customized pace training plans for runners and provides a pace stability score to enhance pace control and ultimately helps customers achieve personal bests in marathon and other running events.</li>
+                </ul>
+            </div>
+            <div class="scroll-pane pane-weaknesses">
+                <div class="section-title weakness-title">▼ Weaknesses</div>
+                <ul>
+                    <li><strong>Static Interaction:</strong> The AI coach lacks competitiveness and adaptability to competitive scenarios, which stands in sharp contrast to the core design of our project that centers on constructing a competitive voice interaction logic which is empowering runners to compare their real-time running data with their own historical records or friends’ shared data. Recent research has evidenced that the presence of a competitor can significantly boost physical effort across both short and long exercise duration[4,fronties]. Moreover, competitiveness has been proven to enhance physical motivation, including the intrinsic motivation to persist in sports practice[4]. </li>
+                    <li><strong>Rigid AI Personality:</strong> There is no differentiated AI personality setting. The voice style is fixed as a unified professional tone with no optional styles customized via prompts that leads to a rigid interactive experience that struggles to arouse runners’ emotional engagement during exercise.</li>
+                    <li><strong>Limited Trigger Logic:</strong> The voice trigger logic is single and lacks dynamic design. It cannot provide accurate voice feedback for the real-time changes in the distance difference between runners and target data, and is unable to adapt to competitive scenarios such as Ghost Run that require real-time tracking of data differences.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-row">
+        <div class="product-name" style="background-color: var(--macaron-pink);">Yodo Run</div>
+        <div class="split-content">
+            <div class="scroll-pane pane-strengths">
+                <div class="section-title strength-title">▲ Strengths</div>
+                <ul>
+                    <li><strong>Diversified Incentives:</strong> The app has diversified reward mechanisms with dual cash and virtual incentives. It has a multi-layered reward system combining platform-initiated benefits and user competition benefits. Users can get instant cash reward by completing daily sports goals, and also participate in various sports events to obtain virtual medals and honor certificates.</li>
+                    <li><strong>Growth Hierarchy:</strong> It has a hierarchical medal and level growth system. Users can unlock exclusive medals and honor logos by completing specific challenges and gain experience points to upgrade. The upgraded level can be exchanged for advanced sports courses and exclusive virtual image decorations, and the real-time updated friend ranking list further stimulates users' competitive awareness and sports stickiness.</li>
+                    <li><strong>Motion Analysis:</strong> Equipped with self-developed AI skeleton recognition and motion analysis algorithms, it can capture motion postures in real time, correct wrong movements through voice feedback, and customize personalized weekly or monthly training plans according to users' physical fitness levels and sports goals. </li>
+                </ul>
+            </div>
+            <div class="scroll-pane pane-weaknesses">
+                <div class="section-title weakness-title">▼ Weaknesses</div>
+                <ul>
+                    <li><strong>Intrinsic Motivation Undermining:</strong> Extant psychological research provides compelling evidence that tangible rewards exert a detrimental undermining effect on individuals’ intrinsic motivation for simple tasks[5,APA]. The agreed running requires users to pay a deposit to join the group, and the completed users divide the deposit of the uncompleted ones. This money-related reward and punishment mechanism not only brings psychological moral binding to users, but also easily triggers vicious competition among users, making sports deviate from the original health purpose and become a utilitarian behavior for chasing money interests.</li>
+                    <li><strong>Data Sync Errors:</strong> The platform’s sports data statistics for reward activities has obvious synchronization errors, leading to unfair judgment of activity completion. Users may fail to obtain corresponding rewards due to non-subjective data errors, which seriously reduces the credibility of the reward mechanism.</li>
+                    <li><strong>Accessibility Barriers:</strong> Although the platform sets up daily sports red envelope rewards, the cash withdrawal has strict restrictions , and there are frequent problems such as delayed withdrawal and malicious deduction of small-amount rewards. The low actual accessibility of cash rewards makes the incentive effect of the reward mechanism greatly discounted.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-row">
+        <div class="product-name" style="background-color: var(--macaron-mint);">Walkr</div>
+        <div class="split-content">
+            <div class="scroll-pane pane-strengths">
+                <div class="section-title strength-title">▲ Strengths</div>
+                <ul>
+                    <li><strong>Narrative Gamification:</strong> It provides highly engaging gamified experience. Walkr transforms physical activity into a game-like experience by converting steps into in-game resources, enabling users to explore virtual planets and progress within a narrative system. This strong gamification design enhances user engagement and enjoyment.</li>
+                    <li><strong>Low Entry Barrier:</strong> The barrier is low to entry and access. Walkr requires minimal effort from users, as it passively tracks daily steps without demanding structured exercise routines. This lowers the entry barrier for beginners and casual users, making it inclusive for a broader population.</li>
+                    <li><strong>Instant Reinforcement:</strong> The app provides frequent in-game rewards and a clear sense of progression, which offers immediate positive reinforcement. This helps address the delayed gratification problem commonly found in fitness activities.</li>
+                </ul>
+            </div>
+            <div class="scroll-pane pane-weaknesses">
+                <div class="section-title weakness-title">▼ Weaknesses</div>
+                <ul>
+                    <li><strong>Non-Exercise Focus:</strong> Walkr is lack of exercise-specific feedback and training value. While Walkr effectively promotes physical activity, it does not provide detailed or actionable feedback related to exercise performance. A research has claimed that an automated method with mobile phone sensors and computational ability do well in help people to maintain a longer motivation in exercising[6,the mobile] As a result, it offers limited support for users seeking structured training or performance improvement.</li>
+                    <li><strong>Weak Contextual Linkage:</strong> The integration of physical activity and game mechanics is weak. The connection between physical activity and in-game outcomes in Walkr is largely indirect, as step counts are simply converted into abstract resources. This lack of contextual linkage reduces the meaningfulness of the activity itself and may weaken long-term engagement for users seeking more purpose-driven interaction.</li>
+                    <li><strong>Data Simplicity:</strong> The data Walkr primarily relies on basic step-count data collected from the mobile device, with limited integration of richer fitness metrics such as pace, distance, or real-time performance indicators. This restricts the system’s ability to provide meaningful, context-aware feedback and reduces its applicability for more structured or performance-oriented physical activities.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="persona-card" style="border-left-color:var(--macaron-blue); display: flex; flex-direction: column; gap: 15px;">
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div class="persona-image" style="width: 80px; height: 80px; background: #f0f0f0; border-radius: 8px; flex-shrink: 0; overflow: hidden; border: 1px dashed #ccc;">
+            <img src="images/Alice.png" alt="Alice" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div>
+            <h3 style="margin-top:0; margin-bottom: 5px;">Persona 1 — The Lone Struggler</h3>
+            <p style="margin: 2px 0;"><strong>Alice</strong> · 22 · University Student</p>
+            <p style="font-style: italic; color: #666; font-size: 0.9em;">"I want to be disciplined, but running alone in the dark just feels lonely and repetitive."</p>
+        </div>
+    </div>
+
+    <div>
+        <p><strong>Pain:</strong> Social anxiety prevents group runs; loses motivation midway due to lack of interaction; finds raw data "boring."</p>
+        <p><strong>Goals:</strong> Build a sustainable habit through emotional companionship and playful, non-task-like engagement.</p>
+        <p><strong>EchoRun Fit:</strong> Alice uses the <strong>"Gentle Supporter"</strong> mode. The AI provides emotional feedback that makes her feel accompanied on campus, turning a "chore" into a supportive journey.</p>
+    </div>
+</div>
+
+<div class="persona-card" style="border-left-color:var(--macaron-pink); display: flex; flex-direction: column; gap: 15px;">
+    <div style="display: flex; gap: 20px; align-items: flex-start;">
+        <div class="persona-image" style="width: 80px; height: 80px; background: #f0f0f0; border-radius: 8px; flex-shrink: 0; overflow: hidden; border: 1px dashed #ccc;">
+            <img src="images/Jason.png" alt="Jason" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div>
+            <h3 style="margin-top:0; margin-bottom: 5px;">Persona 2 — The Performance Chaser</h3>
+            <p style="margin: 2px 0;"><strong>Jason</strong> · 27 · Software Engineer</p>
+            <p style="font-style: italic; color: #666; font-size: 0.9em;">"Checking my phone mid-sprint kills my flow. I need to know my pace *while* I'm pushing my limits."</p>
+        </div>
+    </div>
+
+    <div>
+        <p><strong>Pain:</strong> Post-run data is too late for adjustment; lacks real-time competitive context; generic voice cues are uninspiring.</p>
+        <p><strong>Goals:</strong> Real-time performance tuning and dynamic stimulation to break personal records during long runs.</p>
+        <p><strong>EchoRun Fit:</strong> Jason utilizes <strong>"Ghost Racing"</strong>. The audio feedback provides instant gap analysis against his PB (Personal Best), allowing him to adjust effort without glancing at a screen.</p>
+    </div>
+</div>
 
     <div class="ai-reflection">
         <h4>🤖 AI Usage — Week 2</h4>
