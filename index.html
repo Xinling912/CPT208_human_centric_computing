@@ -313,8 +313,9 @@
 
 <div class="persona-card" style="border-left-color:var(--macaron-blue); display: flex; flex-direction: column; gap: 15px;">
     <div style="display: flex; gap: 20px; align-items: flex-start;">
-        <div class="persona-image" style="width: 80px; height: 80px; background: #f0f0f0; border-radius: 8px; flex-shrink: 0; overflow: hidden; border: 1px dashed #ccc;">
+        <div class="persona-image" style="width: 80px; height: auto; background: #f0f0f0; border-radius: 8px; flex-shrink: 0; overflow: hidden; border: 1px dashed #ccc;">
             <img src="images/Alice.png" alt="Alice" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="font-size: 10px; color: #999; margin-top: 2px;">image generated via gemini</div>
         </div>
         <div>
             <h3 style="margin-top:0; margin-bottom: 5px;">Persona 1 — The Lone Struggler</h3>
@@ -332,9 +333,11 @@
 
 <div class="persona-card" style="border-left-color:var(--macaron-pink); display: flex; flex-direction: column; gap: 15px;">
     <div style="display: flex; gap: 20px; align-items: flex-start;">
-        <div class="persona-image" style="width: 80px; height: 80px; background: #f0f0f0; border-radius: 8px; flex-shrink: 0; overflow: hidden; border: 1px dashed #ccc;">
+        <div class="persona-image" style="width: 80px; height:auto; background: #f0f0f0; border-radius: 8px; flex-shrink: 0; overflow: hidden; border: 1px dashed #ccc;">
             <img src="images/Jason.png" alt="Jason" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="font-size: 10px; color: #999; margin-top: 2px;">image generated via gemini</div>
         </div>
+        
         <div>
             <h3 style="margin-top:0; margin-bottom: 5px;">Persona 2 — The Performance Chaser</h3>
             <p style="margin: 2px 0;"><strong>Jason</strong> · 27 · Software Engineer</p>
@@ -351,9 +354,9 @@
 
     <div class="ai-reflection">
         <h4>🤖 AI Usage — Week 2</h4>
-        <p><strong>Task:</strong> Pivoting project direction and adapting personas to the EchoRun concept.</p>
-        <p><strong>Decision:</strong> We rejected a complex real-time LLM-Agent architecture in favour of <em>Glanceable UI + Event-Triggered Local Logic</em> and adopted the Wizard of Oz evaluation method — pre-rendering TTS voices to test the HCI experience without API latency.</p>
-        <p style="font-size:0.85em;color:#aaa;margin-top:8px;">Citation: Claude Sonnet 4.6, accessed 2026-03-30, https://claude.ai. Used for persona refinement and project-direction pivoting.</p>
+        <p><strong>Task:</strong> Refining project direction and aligning personas with the EchoRun experience.</p>
+        <p><strong>Decision:</strong>We moved away from a complex real-time LLM agent architecture due to latency and implementation overhead, which conflicted with the need for immediate feedback in a running context. Instead, we adopted a Glanceable UI with event-triggered local logic to deliver lightweight, real-time interaction. To evaluate the design, we used a Wizard of Oz approach with pre-rendered TTS audio to simulate AI voice feedback, enabling us to test responsiveness and user experience without relying on live APIs.</p>
+        <p style="font-size:0.85em;color:#aaa;margin-top:8px;">Citation:[1] Gemini, version Gemini 3, accessed April 19, 2026, https://gemini.google.com. Used to generate user persona images (Alice and Jason) for the EchoRun project.</p>
     </div>
 </section>
 
@@ -617,5 +620,41 @@
     <p>This section will document the low-fi sketch to Figma clickable prototype to deployed web prototype evolution, including the system architecture diagram, individual contribution table, and usability testing results.</p>
 </section>
 
+<section>
+    <div class="week-tag" style="background:#C7CEEA;">References</div>
+    <h2>References</h2>
+
+    <div style="background:#FAFAFA; border-radius:16px; padding:20px; border:1px solid #EEE; font-size:0.88em; line-height:1.7;">
+        
+        <p>[1] C. Lister, J. H. West, B. Cannon, T. Sax, and D. Brodegard, 
+        "Just a Fad? Gamification in Health and Fitness Apps," 
+        <em>JMIR Serious Games</em>, vol. 2, no. 2, e9, Aug. 2014, doi: 10.2196/games.3413.</p>
+
+        <p>[2] H. S. J. Chew, 
+        "The Use of Artificial Intelligence–Based Conversational Agents (Chatbots) for Weight Loss: Scoping Review and Practical Recommendations," 
+        <em>JMIR Medical Informatics</em>, vol. 10, no. 4, e32578, Apr. 2022, doi: 10.2196/32578.</p>
+
+        <p>[3] B. Van Hooren, J. Goudsmit, J. Restrepo, and S. Vos, 
+        "Real-time feedback by wearables in running: Current approaches, challenges and suggestions for improvements," 
+        <em>Journal of Sports Sciences</em>, vol. 38, no. 2, pp. 214–230, Dec. 2019, doi: 10.1080/02640414.2019.1690960.</p>
+
+        <p>[4] B. C. DiMenichi and E. Tricomi, 
+        "The power of competition: Effects of social motivation on attention, sustained physical effort, and learning," 
+        <em>Frontiers in Psychology</em>, vol. 6, p. 1282, Sep. 2015, doi: 10.3389/fpsyg.2015.01282.</p>
+
+        <p>[5] M. Promberger and T. M. Marteau, 
+        "When do financial incentives reduce intrinsic motivation? Comparing behaviors studied in psychological and economic literatures," 
+        <em>Health Psychology</em>, vol. 32, no. 9, pp. 950–957, Sep. 2013, doi: 10.1037/a0032727.</p>
+
+        <p>[6] M. Kranz, A. Möller, N. Hammerla, S. Diewald, T. Plötz, P. Olivier, and L. Roalter, 
+        "The mobile fitness coach: Towards individualized skill assessment using personalized mobile devices," 
+        <em>Pervasive and Mobile Computing</em>, vol. 9, no. 2, pp. 203–215, Apr. 2013, doi: 10.1016/j.pmcj.2012.06.002.</p>
+
+        <p>[7] F. R. Simoni and L. B. Espartel, 
+        "Emotional artificial intelligence: The impact of chatbot empathy and emotional tone on consumer satisfaction and word of mouth," 
+        <em>International Journal of Human–Computer Studies</em>, vol. 210, p. 103764, 2026, doi: 10.1016/j.ijhcs.2026.103764.</p>
+
+    </div>
+</section>
 </body>
 </html>
