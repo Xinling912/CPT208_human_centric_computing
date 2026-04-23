@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71e47f64-430a-47de-8ac6-ed89ad0b51d8" name="更改" comment="增加week2，3内容">
-      <change afterPath="$PROJECT_DIR$/images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/architecture_diagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/video/interview_vlog.mp4" afterDir="false" />
+    <list default="true" id="71e47f64-430a-47de-8ac6-ed89ad0b51d8" name="更改" comment="week8之前的所有portfolio内容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CPT208_PosterPrintingTemplate.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,10 +71,20 @@
       <option name="presentableId" value="Default" />
       <updated>1776145160810</updated>
     </task>
+    <task id="LOCAL-00001" summary="week8之前的所有portfolio内容">
+      <option name="closed" value="true" />
+      <created>1776943692177</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776943692177</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加week2，3内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加week2，3内容" />
+    <MESSAGE value="week8之前的所有portfolio内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="week8之前的所有portfolio内容" />
   </component>
 </project>
