@@ -125,7 +125,8 @@
 </section>
 
 <section>
-    <div class="week-tag">Week 2: Motivation &amp; Personas</div>
+    <div class="week-tag">Week 2: Motivation &amp; Research</div>
+    <br style="clear:both;">
     <h2>1. Project Motivation</h2>
     <p>The surge in AI technology and the growing trend of public fitness have accelerated the development of running-assistive applications. However, despite its popularity, maintaining long-term motivation remains a critical challenge, often leading to high dropout rates. Our field interviews indicate that many solo runners experience feedback poverty, where the lack of immediate reinforcement results in fatigue and disengagement.
 
@@ -311,6 +312,7 @@
 
 </div>
 
+    <h2>3. Stakeholder Analysis: Personas</h2>
 <div class="persona-card" style="border-left-color:var(--macaron-blue); display: flex; flex-direction: column; gap: 15px;">
     <div style="display: flex; gap: 20px; align-items: flex-start;">
         <div class="persona-image" style="width: 80px; height: 80px; background: #f0f0f0; border-radius: 8px; flex-shrink: 0; overflow: hidden; border: 1px dashed #ccc;">
@@ -358,9 +360,9 @@
 </section>
 
 <section>
-    <div class="week-tag" style="background:#FFB7B2;">Week 4: Journey Map, Evaluation &amp; Alternatives</div>
+    <div class="week-tag" style="background:#FFB7B2;">Week 4: User Requirements  &amp;  Ideation Alternatives </div>
 
-    <h2>3. User Journey Map — Current State</h2>
+    <h2>1. User Journey Map — Current State</h2>
     <div class="journey-intro">
         <strong>Persona:</strong> Brian Wang (Persona 2) &nbsp;|&nbsp;
         <strong>Scenario:</strong> Ghost-run against a friend's record using EchoRun &nbsp;|&nbsp;
@@ -473,6 +475,180 @@
 
     <hr class="divider">
 
+    <style>
+        .req-container {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          max-width: 800px;
+          margin: 20px auto;
+          color: #333;
+        }
+        .req-card {
+          background: #ffffff;
+          border-left: 5px solid #42b983; /* Vue Green */
+          border-radius: 8px;
+          padding: 20px;
+          margin-bottom: 25px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+          transition: transform 0.2s;
+        }
+        .req-card:hover {
+          transform: translateY(-3px);
+        }
+        .req-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 15px;
+        }
+        .req-header h4 {
+          margin: 0;
+          color: #2c3e50;
+          font-size: 1.2rem;
+        }
+        .section-tag {
+          font-weight: bold;
+          color: #42b983;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          display: block;
+          margin-bottom: 5px;
+        }
+        .req-body p {
+          line-height: 1.6;
+          margin: 10px 0;
+          color: #555;
+        }
+        .highlight {
+          background: #f0fdf4;
+          padding: 10px;
+          border-radius: 4px;
+          font-style: italic;
+        }
+    </style>
+
+    <div class="req-container">
+        <h2>2. Playful Requirements List</h2>
+
+        <div class="req-card">
+            <div class="req-header">
+                <h4>Ghost Mode: Racing Against Yourself & Friends</h4>
+            </div>
+            <div class="req-body">
+                <span class="section-tag">Why it's fun</span>
+                <p>Running alone is often a chore. This feature turns a workout into a "Mario Kart" style time-trial, tapping into our competitive nature to win a real-time race.</p>
+                <span class="section-tag">Implementation</span>
+                <p class="highlight">Overlay a "Ghost" runner on the live map based on historical GPS data, allowing users to track their relative position and pace.</p>
+            </div>
+        </div>
+
+        <div class="req-card" style="border-left-color: #35495e;">
+            <div class="req-header">
+                <h4>AI Buddy: Coaching with Personality</h4>
+            </div>
+            <div class="req-body">
+                <span class="section-tag">Why it's fun</span>
+                <p>No more cold, robotic data. Our AI Coach acts like a "buddy" who cheers or playfully roasts you, creating a sense of companionship and reducing mental fatigue.</p>
+                <span class="section-tag">Implementation</span>
+                <p class="highlight">Trigger personality-driven feedback (voice/text) based on real-time performance milestones or pace drops.</p>
+            </div>
+        </div>
+
+        <div class="req-card" style="border-left-color: #ffbd2e;">
+            <div class="req-header">
+                <h4>Points & Rank: Leveling Up Your Run</h4>
+            </div>
+            <div class="req-body">
+                <span class="section-tag">Why it's fun</span>
+                <p>By giving every step a tangible "score," the fitness journey feels more like an RPG progression system, satisfying the human need for status and achievement.</p>
+                <span class="section-tag">Implementation</span>
+                <p class="highlight">A point-based economy where users earn rewards for beating Ghost records, used to unlock badges and climb global leaderboards.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2.3 访谈/观察证据（视频） -->
+    <style>
+        .evidence-container {
+          max-width: 850px;
+          margin: 30px auto;
+          font-family: 'Inter', sans-serif;
+        }
+
+        /* 视频播放器外框 */
+        .video-wrapper {
+          position: relative;
+          width: 100%;
+          padding-bottom: 56.25%; /* 16:9 比例 */
+          background: #1a1a1a;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .video-placeholder {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          background: linear-gradient(45deg, #2c3e50, #42b983);
+        }
+
+        /* 实际视频标签（默认隐藏，有了文件再开启） */
+        video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .play-icon {
+          font-size: 50px;
+          margin-bottom: 10px;
+          opacity: 0.8;
+        }
+
+        .interview-notes {
+          margin-top: 20px;
+          padding: 20px;
+          background: #f9f9f9;
+          border-left: 4px solid #42b983;
+          border-radius: 4px;
+        }
+    </style>
+
+    <div class="evidence-container">
+        <h2>3. Evidence of Life: User Interviews & Field Observation</h2>
+
+        <div class="video-wrapper">
+            <video
+                    controls
+                    preload="metadata"
+                    poster="/images/video-cover.jpg">
+                <source src="/video/interview_vlog.mp4" type="video/mp4">
+                您的浏览器不支持视频播放。
+            </video>
+
+            <div class="video-placeholder">
+                <div class="play-icon">🎬</div>
+                <p>Video Document: EchoRun Field Study & Interviews</p>
+                <small>(Video file placeholder: interview_vlog.mp4)</small>
+            </div>
+        </div>
+
+        <div class="interview-notes">
+            <h4>Interview Insights</h4>
+            <p><strong>Who we talked to:</strong> 3 regular runners and 1 "couch potato" from XJTLU campus.</p>
+            <p><strong>Key Discovery:</strong> Most runners find standard tracking apps "lonely." The idea of a <strong>Ghost Runner</strong> peaked their interest, with one student saying, <em>"It's like racing with a shadow friend."</em></p>
+        </div>
+    </div>
     <h2>4. Early Evaluation — Wizard of Oz Study</h2>
     <p style="margin-bottom:14px;">Following the WoZ prototyping method (CPT208 Lecture 03), we pre-recorded two audio conditions and had 8 XJTLU students evaluate them — testing the <em>HCI experience</em> before committing to production AI integration.</p>
 
