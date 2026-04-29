@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71e47f64-430a-47de-8ac6-ed89ad0b51d8" name="更改" comment="修改部分未完成信息（不可见）">
-      <change afterPath="$PROJECT_DIR$/audio/A1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/A2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/A3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/A4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/A5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/B1.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/B2.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/B3.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/B4.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audio/B5.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/new_design1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/new_design2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/new_design3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/old_design1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/old_design2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/old_design3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/questionnaire_report_peilin.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="71e47f64-430a-47de-8ac6-ed89ad0b51d8" name="更改" comment="完成大部分portfolio内容，只剩Usability Testing和Final Reflection部分需要后续收集数据" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777016922379</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成大部分portfolio内容，只剩Usability Testing和Final Reflection部分需要后续收集数据">
+      <option name="closed" value="true" />
+      <created>1777455431144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1777455431144</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -144,6 +132,7 @@
     <MESSAGE value="修改视频不可见bug" />
     <MESSAGE value="修改视频不可见bug和个人信息" />
     <MESSAGE value="修改部分未完成信息（不可见）" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改部分未完成信息（不可见）" />
+    <MESSAGE value="完成大部分portfolio内容，只剩Usability Testing和Final Reflection部分需要后续收集数据" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成大部分portfolio内容，只剩Usability Testing和Final Reflection部分需要后续收集数据" />
   </component>
 </project>
