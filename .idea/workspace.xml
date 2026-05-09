@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71e47f64-430a-47de-8ac6-ed89ad0b51d8" name="更改" comment="格式调整">
+    <list default="true" id="71e47f64-430a-47de-8ac6-ed89ad0b51d8" name="更改" comment="修改部分AI使用内容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777455840948</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="修改部分AI使用内容">
+      <option name="closed" value="true" />
+      <created>1777456478035</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777456478035</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -145,6 +152,7 @@
     <MESSAGE value="修改部分未完成信息（不可见）" />
     <MESSAGE value="完成大部分portfolio内容，只剩Usability Testing和Final Reflection部分需要后续收集数据" />
     <MESSAGE value="格式调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="格式调整" />
+    <MESSAGE value="修改部分AI使用内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改部分AI使用内容" />
   </component>
 </project>
