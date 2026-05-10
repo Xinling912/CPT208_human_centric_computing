@@ -551,7 +551,7 @@
     <h1>CPT208: Designing Playful Experiences</h1>
     <p><strong>Team:</strong> Group C1-3 🌸</p>
     <p><strong>Topic:</strong> C1 (Go Runners) — <strong>EchoRun</strong></p>
-    <p><em>Eyes-free AI Ghost Pacer: Running with personalised auditory companionship.</em></p>
+    <p><em>Eyes-free AI Ghost Pacer: Running with personalised AI coach and Ghost.</em></p>
 </header>
 
 <section>
@@ -561,36 +561,27 @@
             <img src="images/avatar_xinling.jpg" alt="Avatar" class="card-avatar">
             <h3 class="card-title">Xinling Du</h3>
             <p class="card-subtitle">ID: 2363292</p>
-<!--            <p class="card-highlight">PM &amp; UI/UX Lead</p>-->
-<!--            <p class="card-text">Glanceable UI design and audio-feedback loop concept — the visual layer of EchoRun.</p>-->
         </div>
         <div class="card" style="border-top-color:var(--macaron-mint);">
             <img src="images/avatar_zairan.jpg" alt="Avatar" class="card-avatar">
             <h3 class="card-title">Zairan Shi</h3>
             <p class="card-subtitle">ID: 2361072</p>
-<!--            <p class="card-highlight">Technical Lead</p>-->
-<!--            <p class="card-text">Event-triggered local logic, GPS tracking, and TTS audio pipeline architecture.</p>-->
         </div>
         <div class="card" style="border-top-color:var(--macaron-blue);">
             <img src="images/avatar_lingyu.jpg" alt="Avatar" class="card-avatar">
             <h3 class="card-title">Lingyu Wang</h3>
             <p class="card-subtitle">ID: 2361896</p>
-<!--            <p class="card-highlight">Interaction Designer</p>-->
-<!--            <p class="card-text">Eyes-free interaction scenarios, user journey mapping, and design alternative analysis.</p>-->
         </div>
         <div class="card" style="border-top-color:var(--macaron-yellow);">
             <img src="images/avatar_peilin.jpg" alt="Avatar" class="card-avatar">
             <h3 class="card-title">Peilin Liu</h3>
             <p class="card-subtitle">ID: 2363272</p>
-<!--            <p class="card-highlight">UX Researcher</p>-->
-<!--            <p class="card-text">Wizard of Oz A/B study design, data analysis, and early evaluation reporting.</p>-->
         </div>
     </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- 1. MOTIVATION & RESEARCH（动机与研究） -->
-<!-- ============================================================ -->
+
+<!-- 1. MOTIVATION & RESEARCH -->
 <section>
     <div class="week-tag">Week 2: Motivation &amp; Research</div>
     <br style="clear:both;">
@@ -833,9 +824,8 @@
 
 </section>
 
-<!-- ============================================================ -->
-<!-- 2. USER REQUIREMENTS（用户需求） -->
-<!-- ============================================================ -->
+
+<!-- 2. USER REQUIREMENTS -->
 <section>
     <div class="week-tag" style="background:#FFB7B2;">Week 4: User Requirements  &amp;  Ideation Alternatives </div>
     <br style="clear:both;">
@@ -1043,7 +1033,7 @@
         </div>
     </div>
 
-    <!-- 2.3 访谈/观察证据（视频） -->
+    <!-- 访谈/观察证据（视频） -->
     <style>
         .evidence-container {
           max-width: 850px;
@@ -1076,7 +1066,7 @@
           background: linear-gradient(45deg, #2c3e50, #42b983);
         }
 
-        /* 实际视频标签（默认隐藏，有了文件再开启） */
+        /* 实际视频标签 */
         video {
           position: absolute;
           top: 0;
@@ -1112,12 +1102,6 @@
                 <source src="video/interview_vlog.mp4" type="video/mp4">
                 您的浏览器不支持视频播放。
             </video>
-
-<!--            <div class="video-placeholder">-->
-<!--                <div class="play-icon">🎬</div>-->
-<!--                <p>Video Document: EchoRun Field Study & Interviews</p>-->
-<!--                <small>(Video file placeholder: interview_vlog.mp4)</small>-->
-<!--            </div>-->
         </div>
 
         <div class="interview-notes">
@@ -1219,7 +1203,52 @@
         <div class="fb-row">Design insight: users want switchable personas — sarcastic / encouraging / chill — validating our persona selection screen as a must-have feature</div>
     </div>
 
-    <!--    AI 教练音频展示位置-->
+    <div style="display: flex; flex-direction: column; align-items: center; margin: 40px 0;">
+        <a href="questionnaire_linyu.pdf" target="_blank" style="text-decoration: none;">
+            <div style="
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #7EB09E 0%, #6A9A88 100%);
+            color: white;
+            padding: 18px 45px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(126, 176, 158, 0.3);
+            border: 2px solid rgba(255,255,255,0.1);
+            cursor: pointer;"
+                 onmouseover="
+                this.style.transform='translateY(-5px) scale(1.02)';
+                this.style.boxShadow='0 15px 30px rgba(126, 176, 158, 0.4)';
+                this.style.filter='brightness(1.05)';"
+                 onmouseout="
+                this.style.transform='translateY(0) scale(1)';
+                this.style.boxShadow='0 10px 20px rgba(126, 176, 158, 0.3)';
+                this.style.filter='brightness(1)';"
+            >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+
+                <span>View Detailed Questionnaire Report (PDF)</span>
+
+            </div>
+        </a>
+
+        <span style="margin-top: 15px; font-size: 0.8rem; color: #999; font-family: sans-serif;">
+        Click to See Statistical Data & User Transcripts
+    </span>
+    </div>
+
+
+    <!-- AI 教练音频展示位置-->
     <hr class="divider">
     <h2>5. AI Persona Voice Prototypes (A/B Comparison)</h2>
     <p>Based on our A/B Test script, we've developed 10 audio triggers across 5 key running scenarios to compare user engagement between a neutral assistant and a challenging motivator.</p>
@@ -1290,79 +1319,7 @@
         <p style="font-size: 0.75em; color: #666; margin-bottom: 5px;">"This result is not good enough."</p>
         <audio class="mini-player" controls src="audio/B5.mp3"></audio>
     </div>
-    </div>
-    </div>
 
-    <hr class="divider">
-    <h2>6. Research Findings & User Feedback (n=8)</h2>
-    <table class="data-table">
-        <thead>
-        <tr>
-            <th style="text-align: left; padding-left: 25px;">Dimension</th>
-            <th>Group A (Neutral)</th>
-            <th>Group B (Sarcastic)</th>
-            <th>Outcome</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td style="text-align: left; padding-left: 25px;">Motivation Boost</td>
-            <td>
-                <span class="val-text">25%</span>
-                <div class="bar-container"><div class="bar-fill" style="width: 25%; background: var(--macaron-blue);"></div></div>
-            </td>
-            <td>
-                <span class="val-text" style="color: #E5989B;">87.5%</span>
-                <div class="bar-container"><div class="bar-fill" style="width: 87.5%; background: var(--macaron-pink);"></div></div>
-            </td>
-            <td><span class="winner-tag">Significant Win</span></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; padding-left: 25px;">Gaming Immersion</td>
-            <td>
-                <span class="val-text">12.5%</span>
-                <div class="bar-container"><div class="bar-fill" style="width: 12.5%; background: var(--macaron-blue);"></div></div>
-            </td>
-            <td>
-                <span class="val-text" style="color: #E5989B;">100%</span>
-                <div class="bar-container"><div class="bar-fill" style="width: 100%; background: var(--macaron-pink);"></div></div>
-            </td>
-            <td><span class="winner-tag">Immersion Leader</span></td>
-        </tr>
-        <tr>
-            <td style="text-align: left; padding-left: 25px;">User Preference</td>
-            <td>
-                <span class="val-text">2 users</span>
-                <div class="bar-container"><div class="bar-fill" style="width: 25%; background: var(--macaron-blue);"></div></div>
-            </td>
-            <td>
-                <span class="val-text" style="color: #E5989B;">6 users</span>
-                <div class="bar-container"><div class="bar-fill" style="width: 75%; background: var(--macaron-pink);"></div></div>
-            </td>
-            <td><span class="winner-tag">Final Choice</span></td>
-        </tr>
-        </tbody>
-    </table>
-
-    <div class="quote-container">
-        <div class="quote-card">
-            “毒舌太顶了，这波给到夯！” —— Participant #1
-        </div>
-        <div class="quote-card">
-            “听到音频 B 的时候，感觉更像一场竞技游戏，很有代入感。” —— Participant #2
-        </div>
-        <div class="quote-card">
-            “A比较平淡，B更吸引人继续听下去。” —— Participant #6
-        </div>
-    </div>
-
-    <div class="insight-box" style="margin-top:20px; grid-template-columns: 1fr;">
-        <div class="opp-card">
-            <h4>Quantitative Insight:</h4>
-            <p>Real data shows that 75% of participants overwhelmingly chose Group B (sharp tongued style). Although 25% of users are concerned about being offended, all participants acknowledge that Group B has a significant advantage in terms of gameplay. This proves the core value of EchoRun: breaking the monotony of solo running through emotional and personified audio feedback.</p>
-        </div>
-    </div>
-    </div>
 
     <hr class="divider">
 
@@ -1372,11 +1329,10 @@
         <p><strong>Human verification:</strong> All generated charts and statistical data have been manually reviewed based on the questionnaire survey data to ensure accuracy. The journey map and design decisions remain our original works, without the use of AI.</p>
         <p style="font-size:0.85em;color:#aaa;margin-top:8px;">Citation: Claude Sonnet 4.6, accessed 2026-03-30, https://claude.ai. Used for generating SVG charts and statistical summaries from raw questionnaire data.</p>
     </div>
+    </div>
 </section>
 
-<!-- ============================================================ -->
-<!-- 3. IDEATION & ALTERNATIVES（构思与备选） -->
-<!-- ============================================================ -->
+<!-- 3. IDEATION & ALTERNATIVES -->
 <section>
     <div class="week-tag" style="background:var(--macaron-blue);color:#3B8C7A;">Week 5: Ideation & Alternatives</div>
     <br style="clear:both;">
@@ -1466,7 +1422,7 @@
         <p class="click-hint-text">Click cards to flip through our ideation process</p>
     </div>
 
-    <!-- 3.2 设计备选方案对比 -->
+    <!-- 设计备选方案对比 -->
     <h2>2. Design Alternatives and Fidelity Rationale</h2>
     <p style="margin-bottom:8px;">We evaluated three interaction paradigms. Per the lecture fidelity guidance, we chose the prototype type that answers our <em>core hypothesis</em> with the cheapest, fastest method — not the most polished one.</p>
 
@@ -1502,7 +1458,7 @@
         </div>
     </div>
 
-<!--    3.3 低保真Figma链接 -->
+    <!-- 低保真Figma链接 -->
     <h2>3. Low-Fi Prototype</h2>
     <style>
         .figma-container {
@@ -1602,13 +1558,12 @@
     });
 </script>
 
-<!-- ============================================================-->
-<!-- 4. TECHNICAL IMPLEMENTATION（技术实现）-->
-<!-- ============================================================-->
+
+<!-- 4. TECHNICAL IMPLEMENTATION -->
 <section>
     <div class="week-tag" style="background:var(--macaron-blue);color:#3B8C7A;">Week 6–10: Technical Implementation</div>
     <br style="clear:both;">
-    <!-- 4.1 系统架构图 -->
+    <!-- 系统架构图 -->
     <h2>1. System Architecture</h2>
     <div class="architecture-img-wrapper" style="width:100%; margin-bottom:16px;">
         <img src="images/architecture_diagram.png" alt="System Architecture" style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
@@ -1786,7 +1741,7 @@
         </p>
     </div>
 
-    <!-- 4.2 高保真托管网址（新增占位） -->
+    <!-- 高保真托管网址-->
     <h2 style="margin-bottom: 10px;">2. High-Fi Prototype</h2>
     <p style="color: #888; font-size: 0.9em; margin-bottom: 25px;">Experience the fully interactive EchoRun interface in your browser.</p>
 
@@ -1800,7 +1755,7 @@
     <p style="font-size: 0.8em; color: #BBB;">Compatible with Chrome, Safari, and Edge</p>
 
 
-    <!--  4.3 个人贡献表（新增占位）-->
+    <!-- 个人贡献表-->
     <h2>3. Individual Contributions</h2>
     <table class="contribution-table">
         <thead>
@@ -1850,9 +1805,9 @@
     </table>
 </section>
 
-<!-- ============================================================ -->
-<!-- 5. EVALUATION & REFLECTION（评估与反思） -->
-<!-- ============================================================ -->
+
+<!-- 5. EVALUATION & REFLECTION -->
+
 <section>
     <div class="week-tag" style="background:var(--macaron-pink);">Week 12: Evaluation & Reflection</div>
     <br style="clear:both;">
@@ -1868,7 +1823,7 @@
             </p>
         </div>
 
-        <!-- Section 1: Evaluated Metrics (3 columns) -->
+        <!-- Evaluated Metrics -->
         <div style="padding: 1rem 1.2rem;">
             <div style="font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; color: #7EB09E; margin-bottom: 8px;">(1) EVALUATED METRICS</div>
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
@@ -1890,7 +1845,7 @@
             </div>
         </div>
 
-        <!-- Section 2: Performance Results -->
+        <!-- Performance Results -->
         <div style="padding: 1rem 1.2rem; border-top: 1px solid #EFE6DB;">
             <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 12px;">
                 <span style="font-weight: 700; font-size: 0.8rem; color: #7EB09E; letter-spacing: 0.5px;">(2) PERFORMANCE RESULTS</span>
@@ -1902,7 +1857,7 @@
             </ul>
         </div>
 
-        <!-- Section 3: Key Observations -->
+        <!-- Key Observations -->
         <div style="padding: 1rem 1.2rem; border-top: 1px solid #EFE6DB;">
             <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 12px;">
                 <span style="font-weight: 700; font-size: 0.8rem; color: #7EB09E; letter-spacing: 0.5px;">(3) KEY OBSERVATIONS</span>
@@ -1913,7 +1868,7 @@
             </ul>
         </div>
 
-        <!-- Section 4: User Acceptance -->
+        <!-- User Acceptance -->
         <div style="padding: 1rem 1.2rem; border-top: 1px solid #EFE6DB; border-bottom: 1px solid #EFE6DB;">
             <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 12px;">
                 <span style="font-weight: 700; font-size: 0.8rem; color: #7EB09E; letter-spacing: 0.5px;">(4) USER ACCEPTANCE</span>
@@ -1945,7 +1900,7 @@
             </div>
         </div>
 
-        <!-- Section 5: Summary -->
+
         <div style="padding: 0.8rem 1.2rem; background: #F9F6F0;">
             <p style="margin:0; font-size:0.8rem; color:#8F7A68;">
                 <strong>Summary:</strong> The Alpha version validated the feasibility of Echo Run's ghost running and AI coach features. However, the UI style and layout need optimization to make ghost run operations more intuitive. We should also consider providing real geographic location and track display, along with an engaging achievements interface.
@@ -2124,7 +2079,7 @@
 
         <div class="reflection-box">
 
-            <!-- ========= Section 1: Social & Ethical Implications ========= -->
+            <!-- Social & Ethical Implications  -->
             <div style="margin-bottom: 2.2rem;">
                 <h4 style="margin:0 0 12px 0; display: flex; align-items: center; gap: 8px;">
                     <i class="fas fa-balance-scale" style="color: #7EB09E;"></i>
@@ -2146,7 +2101,7 @@
                 </div>
             </div>
 
-            <!-- ========= Section 2: AI Usage Reflection (P-O-A Format) ========= -->
+            <!-- AI Usage Reflection -->
             <div>
                 <h4 style="margin:0 0 12px 0; display: flex; align-items: center; gap: 8px;">
                     <i class="fas fa-robot" style="color: #7EB09E;"></i>
@@ -2154,7 +2109,7 @@
                 </h4>
                 <div style="background: #FEFCF8; border-radius: 20px; border: 1px solid #EFE6DB; overflow: hidden;">
 
-                    <!-- Case 1 Card -->
+
                     <div style="padding: 1rem 1.2rem; border-bottom: 1px solid #F0E8DF;">
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
                             <span style="background: #7EB09E; color: white; font-size: 0.7rem; font-weight: bold; padding: 2px 10px; border-radius: 20px;">Case 1</span>
@@ -2174,7 +2129,7 @@
                         </div>
                     </div>
 
-                    <!-- Case 2 Card -->
+
                     <div style="padding: 1rem 1.2rem; border-bottom: 1px solid #F0E8DF;">
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
                             <span style="background: #7EB09E; color: white; font-size: 0.7rem; font-weight: bold; padding: 2px 10px; border-radius: 20px;">Case 2</span>
@@ -2194,7 +2149,7 @@
                         </div>
                     </div>
 
-                    <!-- AI Collaboration Summary -->
+
                     <div style="padding: 1rem 1.2rem; background: #F9F6F0;">
                         <p style="margin:0; font-size:0.85em; color:#5F544B;">
                             <strong>AI Takeaways:</strong> AI did improve development efficiency and filled some gaps in our front-end knowledge. Many times, we had an idea, and AI provided us with technical options to implement it, greatly reducing our learning cost. However, it also has many problems. For example, AI cannot make design trade-offs; we still need to constantly innovate to balance technical issues with practical outcomes. Moreover, AI-generated code often has issues where it "seems correct but actually has problems" — it runs without errors, but problems are discovered during testing. A simple example: we had a component to turn off the AI coach's voice, but after turning it off, it couldn't be turned back on. These types of minor errors were very common in the code, requiring significant effort to detect and fix. Therefore, AI-generated code still requires our own review and testing. Also, the longer the chain of instructions given to AI, the higher the probability of errors. This forces us to break down the entire task into small, clear subtasks to ensure accuracy and effectiveness. But breaking it down introduces another AI problem—memory. The UI components generated from two separate tasks can end up with completely different styles. Although AI provided huge assistance in code generation, the core soul of EchoRun — the gameplay logic of "ghost racing," the closed-loop design of user experience, and the final usability evaluation — were all completed by our team ourselves.
@@ -2203,12 +2158,8 @@
                 </div>
             </div>
         </div>
+    </div>
 
-<!--    <div class="ai-reflection">-->
-<!--        <h4> AI Usage — Week 5</h4>-->
-<!--        <p><strong>Chart generation:</strong> All inline SVG charts were generated with Claude assistance based on real collected data and real decision we made.</p>-->
-<!--        <p style="font-size:0.85em;color:#aaa;margin-top:8px;">Citation: Claude Sonnet 4.6, accessed 2026-03-30, https://claude.ai. Used for questionnaire design, data analysis, SVG chart generation, and HTML portfolio development assistance.</p>-->
-<!--    </div>-->
 </section>
 
 <section>
